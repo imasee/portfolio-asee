@@ -1,11 +1,13 @@
 import React, { Fragment } from "react";
 import SocialMediaLinks from "./SocialMediaLinks";
 
-export function TitleDetail({ name = "Mohammed Asif", title = "Full stack developer" }) {
+
+export function TitleDetail({ name = "Mohammed Asif", title = "Full stack web developer" }) {
   return (
     <div class="title d-flex text-light mr-auto text-left flex-column justify-content-start">
+      <p>hi;</p>
+      <div >i'm<span className="name"> {name}</span></div>
       <div className="designation">{title}</div>
-      <div className="name">{name}</div>
     </div>)
 }
 
