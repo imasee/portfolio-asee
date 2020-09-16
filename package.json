@@ -30,5 +30,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Portfolio to showcase skills and achievements.",
+  "main": "index.js",
+  "repository": "https://github.com/imasee/portfolio-asee.git",
+  "author": "iamasee <iamkmasee@gmail.com>",
+  "license": "MIT"
 }
