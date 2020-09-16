@@ -1,19 +1,29 @@
 import React, { Fragment } from "react";
 import SocialMediaLinks from "./SocialMediaLinks";
 
+export function TitleDetail({ name = "Mohammed Asif", title = "Full stack developer" }) {
+  return (
+    <div class="title d-flex text-light mr-auto text-left flex-column justify-content-start">
+      <div className="designation">{title}</div>
+      <div className="name">{name}</div>
+    </div>)
+}
+
 export default () => {
   return (
     <Fragment>
-      <header class="container-fluid p-0 m-0 ">
+      <header class="container-fluid page-head p-0 m-0 ">
         <div
           className="bg-image"
           style={{
+            backgroundColor: "black",
             backgroundImage:
-              "https://i.picsum.photos/id/113/4168/2464.jpg?hmac=p1FqJDS9KHL70UWqUjlYPhJKBdiNOI_CIH0Qo-74_fU"
+              'url("https://picsum.photos/id/117/1544/1024")'
           }}
-        />
+        ></div>
+        <TitleDetail />
 
-        <SocialMediaLinks className="text-primary" />
+        <SocialMediaLinks className="text-light" />
       </header>
     </Fragment>
   );
