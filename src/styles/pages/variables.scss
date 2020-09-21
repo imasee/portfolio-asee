@@ -61,3 +61,11 @@ $dark-darker-2: darken(adjust-hue($dark, -10), 20%);
 .bg-dark-darker-2 {
     background: $dark-darker-2;
 }
+
+$text-shadow-dark: 0px 0px 10px #05050563;
+$text-shadow-light: 0px 0px 10px #bdbdbd63;
+
+$shadow-dark: 0px 0px 20px #0505058f;
+
+$dark-primary: #373b3b;
+$dark: black;

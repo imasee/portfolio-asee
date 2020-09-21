@@ -1,0 +1,45 @@
+.appbar {
+    font-family: "Fjalla One", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 86px !important;
+    margin: auto 0;
+    background: rgba(182, 182, 182, 0) !important;
+    &.transparent {
+        background: rgba(182, 182, 182, 0) !important;
+        .navbar-nav a {
+            color: rgba(255, 255, 255, 0);
+        }
+    }
+    &.solid {
+        background: $dark-primary !important;
+        .navbar-nav a {
+            color: rgb(255, 255, 255) !important;
+        }
+    }
+    .navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        a {
+            text-decoration: none;
+            color: rgb(243, 243, 243) !important;
+            &.link-active {
+                &::after {
+                    transform: scaleX(1);
+                    border-bottom: solid 3px #00ddfa;
+                }
+            }
+            &::after {
+                display: block;
+                content: "";
+                border-bottom: solid 3px #ececec;
+                transform: scaleX(0);
+                transition: transform 400ms;
+                transform-origin: 100% 50%;
+            }
+            &:hover:after {
+                transform: scaleX(1);
+            }
+        }
+    }
+}

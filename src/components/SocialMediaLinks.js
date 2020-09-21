@@ -1,14 +1,30 @@
 import React from "react";
+import { IconButton, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles(theme => ({
+  iconButton: {
+    padding: theme.spacing(1),
+    margin: "auto",
+    '&:active,&:focus ': {
+      outline: "none"
+    }
+  }
+}));
 
 export default ({ className }) => {
+  const classes = useStyles();
   return (
-    <div class={[className, "social"].join(" ")}>
-      <i class="fa fa-facebook-official dim mr-1 p-1"></i>
-      <i class="fa fa-instagram mr-1 dim p-1"></i>
-      <i class="fa fa-snapchat mr-1 dim p-1"></i>
-      <i class="fa fa-pinterest-p mr-1 dim p-1"></i>
-      <i class="fa fa-twitter mr-1 dim p-1"></i>
-      <i class="fa fa-linkedin dim p-1"></i>
+    <div className={[className, "social"].join(" ")}>
+      <IconButton className={[classes.iconButton, "mr-1"].join(" ")}>
+        <i className="fa fa-facebook-official dim "></i>
+      </IconButton>
+      <IconButton className={[classes.iconButton, "mr-1"].join(" ")}>
+        <i className="fa fa-instagram dim"></i>
+      </IconButton>
+      <IconButton className={[classes.iconButton, "mr-1"].join(" ")}>
+        <i className="fa fa-linkedin dim"></i>
+      </IconButton>
+
     </div>
   );
 };

@@ -1,4 +1,19 @@
+import { Container } from '@material-ui/core';
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import Radio from '@material-ui/core/Radio';
+import Paper from '@material-ui/core/Paper';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+    },
+
+}));
 
 let summary = `Driven full-stack software developer, familiar with a wide range of programming utilities and
 languages. Knowledgeable of backend and frontend development requirements. Excellent
@@ -7,18 +22,15 @@ problems. Deadline-driven and knowledgeable professional with a strong desire to
 contribute to team success.`;
 
 export default () => {
+    const classes = useStyles();
     return (
-        <div className="container-fluid p-0" id="summary">
-            <div className="jumbotron">
-                <h4 className="heading">
-                    Summary
-            </h4>
-                <p className="content">
-                    {summary}
-                </p>
-            </div>
+        <Container className="summary">
+            <div className="row">
+                <div className="col-12 col-md-4 head">Summary</div>
+                <div className="col-12 col-md-8">{summary}</div>
 
-        </div>
+            </div>
+        </Container>
 
     )
 }
