@@ -1,15 +1,15 @@
-import React, { memo } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { Container } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
+import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import MenuIcon from '@material-ui/icons/Menu';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Hidden from '@material-ui/core/Hidden';
+import MenuIcon from '@material-ui/icons/Menu';
+import React, { memo } from 'react';
 import Navbarlogo from './Nabarlogo';
 import Navlink from './Navlinks';
-import { Container } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -50,7 +50,7 @@ export default memo(function Appbar({ handleSidebarToggle }) {
                 <MenuIcon className={classes.menuIcon} />
             </IconButton>
         </Hidden>
-    ), [handleSidebarToggle, classes.menuButton])
+    ), [handleSidebarToggle, classes.menuButton, classes.menuIcon])
 
     //navlinks - hidden in mobile view
     const SmHiddenNavLink = React.useMemo(() => (
