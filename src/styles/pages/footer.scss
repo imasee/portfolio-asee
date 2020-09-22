@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    text-align: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .social {
+        padding: 1rem 0.5rem;
+        flex-grow: 0;
+        .social {
+        }
+    }
+    .copy-right {
+        padding: 1rem;
+        margin: auto;
+        margin-left: 0;
+    }
+}

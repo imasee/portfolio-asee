@@ -1,0 +1,78 @@
+.landing {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .title {
+        // border-left: 5px solid;
+        margin-left: 34%;
+        font-size: 2rem;
+        z-index: 5;
+        text-transform: capitalize;
+        // border-left: 5px solid white;
+        padding-left: 1rem;
+        .name-intro {
+            display: block;
+            .name {
+                color: #56614d;
+                display: block;
+                font-size: 4rem;
+                font-weight: 900;
+                border-bottom: 5px solid white;
+                text-shadow: $text-shadow-dark;
+            }
+        }
+        .designation {
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .landing {
+        .title {
+            padding-top: 86px;
+            margin-left: 0;
+            margin-bottom: auto;
+            font-size: 1.3rem;
+            padding-left: 24px;
+            .name-intro {
+                .name {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 680px) {
+    .landing {
+        .title {
+            padding-top: 96px;
+            margin-left: 0;
+            margin-bottom: auto;
+            font-size: 1.3rem;
+            padding-left: 24px;
+            .name-intro {
+                .name {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 920px) and (min-width: 680px) {
+    .landing {
+        .title {
+            padding-left: 1.5rem;
+            font-size: 1.5rem;
+            .name-intro {
+                .name {
+                    font-size: 2.8rem;
+                }
+            }
+        }
+    }
+}
