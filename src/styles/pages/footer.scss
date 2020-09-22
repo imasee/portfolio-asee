@@ -1,16 +1,12 @@
 .footer {
-    background: $dark;
     display: flex;
-    color: $white-darker-2;
     text-align: center;
     flex-direction: row-reverse;
     justify-content: space-between;
     .social {
         padding: 1rem 0.5rem;
         flex-grow: 0;
-        background: $dark-primary !important;
         .social {
-            background: $dark-primary !important;
         }
     }
     .copy-right {

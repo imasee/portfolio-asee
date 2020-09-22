@@ -24,13 +24,22 @@ contribute to team success.`;
 export default () => {
     const classes = useStyles();
     return (
-        <Container className="summary">
-            <div className="row">
-                <div className="col-12 col-md-4 head">Summary</div>
-                <div className="col-12 col-md-8">{summary}</div>
+        <div className="summary m-0 p-0">
+            <div className="row d-flex flex-md-row-reverse p-5">
+                {/* <div className="vector col-12 col-md-4">
+                    <div className="mr-auto mx-md-auto ml-3" style={{ backgroundImage: "url('/svg-assets/summary.svg')" }} />
+                </div> */}
+                <div className="col-12 col-md-12 head">
+                    <p className="header col"> Summary</p>
+
+                    <p className="content col-12">
+                        {summary}
+                    </p>
+                </div>
+
 
             </div>
-        </Container>
+        </div>
 
     )
 }

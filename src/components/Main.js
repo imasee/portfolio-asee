@@ -6,9 +6,9 @@ import Landing from './Landing';
 
 export default function Main() {
     return (
-        <Container disableGutters>
+        <React.Fragment>
             <Landing />
             <Summary />
-        </Container>
+        </React.Fragment>
     )
 }

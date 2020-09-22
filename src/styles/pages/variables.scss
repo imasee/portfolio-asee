@@ -1,71 +1,23 @@
-//colors
-$blue-green: #183f3e;
-$blue-green-lighter-1: lighten(adjust-hue($blue-green, 5), 10%);
-$blue-green-lighter-2: lighten(adjust-hue($blue-green, 10), 20%);
-$blue-green-darker-1: darken(adjust-hue($blue-green, -5), 10%);
-$blue-green-darker-2: darken(adjust-hue($blue-green, -10), 20%);
-.bg-blue-green {
-    background: $blue-green;
-}
-.bg-blue-green-lighter-1 {
-    background: $blue-green-lighter-1;
-}
-.bg-blue-green-lighter-2 {
-    background: $blue-green-lighter-2;
-}
-.bg-blue-green-darker-1 {
-    background: $blue-green-darker-1;
-}
-.bg-blue-green-darker-2 {
-    background: $blue-green-darker-2;
-}
-
-$white: #e8e8e8;
-$white-whiteer-1: lighten(adjust-hue($white, 5), 10%);
-$white-whiteer-2: lighten(adjust-hue($white, 10), 20%);
-$white-darker-1: darken(adjust-hue($white, -5), 10%);
-$white-darker-2: darken(adjust-hue($white, -10), 20%);
-.bg-white {
-    background: $white;
-}
-.bg-white-whiteer-1 {
-    background: $white-whiteer-1;
-}
-.bg-white-whiteer-2 {
-    background: $white-whiteer-2;
-}
-.bg-white-darker-1 {
-    background: $white-darker-1;
-}
-.bg-white-darker-2 {
-    background: $white-darker-2;
-}
-
-$dark: #383838;
-$dark-darker-1: lighten(adjust-hue($dark, 5), 10%);
-$dark-darker-2: lighten(adjust-hue($dark, 10), 20%);
-$dark-darker-1: darken(adjust-hue($dark, -5), 10%);
-$dark-darker-2: darken(adjust-hue($dark, -10), 20%);
-.bg-dark {
-    background: $dark;
-}
-.bg-dark-darker-1 {
-    background: $dark-darker-1;
-}
-.bg-dark-darker-2 {
-    background: $dark-darker-2;
-}
-.bg-dark-darker-1 {
-    background: $dark-darker-1;
-}
-.bg-dark-darker-2 {
-    background: $dark-darker-2;
-}
-
 $text-shadow-dark: 0px 0px 10px #05050563;
 $text-shadow-light: 0px 0px 10px #bdbdbd63;
-
 $shadow-dark: 0px 0px 20px #0505058f;
 
-$dark-primary: #373b3b;
-$dark: black;
+//colors
+$primary-dark: rgb(32, 39, 46);
+$primary-dark-2: rgb(28, 33, 38);
+$primary-light: rgb(62, 73, 86);
+$default: #fcfcfc;
+$primary: rgb(60, 110, 118);
+$secondary: rgb(165, 114, 76);
+$dark: rgb(24, 24, 24);
+
+$brown-light: #d3c6b7;
+$green-light: #a0a698;
+$brown-green: #595948;
+$brown-red: #bf7d65;
+
+$gray: #cccccc;
+$gray-dark: #a5a5a5;
+$gray-dark-1: #808080;
+$gray-dark-2: #595959;
+$gray-dark-3: #454545;

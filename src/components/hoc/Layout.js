@@ -4,17 +4,8 @@ import React from 'react';
 import Footer from '../Footer';
 import Appbar from '../Appbar';
 
-const useStyles = makeStyles({
-    toppPadding: {
-        paddingTop: "86px"
-    },
-    marginNone: {
-        margin: 0
-    }
-});
 
 export default function Layout({ children }) {
-    const classes = useStyles();
     const matches = useMediaQuery('(min-width:600px)');
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -24,10 +15,10 @@ export default function Layout({ children }) {
 
     return (
         <React.Fragment>
-            <Appbar handleSidebarToggle={handleDrawerToggle} />
-            <Container disableGutters className={classes.marginNone}>
+            <Appbar />
+            <div className="container-fluid p-0" style={{ width: "100vw", overflowY: "auto", overflowX: "hidden" }}>
                 {children}
-            </Container>
+            </div>
             <Footer />
         </React.Fragment>
     )

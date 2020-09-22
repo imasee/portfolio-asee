@@ -1,20 +1,22 @@
 .appbar {
-    font-family: "Fjalla One", sans-serif;
+    font-family: "Heebo", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     height: 86px !important;
     margin: auto 0;
-    background: rgba(182, 182, 182, 0) !important;
+    left: 0 !important;
+    width: 100vw !important;
+    overflow: hidden;
     &.transparent {
-        background: rgba(182, 182, 182, 0) !important;
+        background-color: transparent !important;
         .navbar-nav a {
-            color: rgba(255, 255, 255, 0);
+            color: $default !important;
         }
     }
     &.solid {
-        background: $dark-primary !important;
+        background-color: $primary !important;
+        background: linear-gradient(to right, #1c2324, #b1c1ae) !important;
         .navbar-nav a {
-            color: rgb(255, 255, 255) !important;
         }
     }
     .navbar-nav {
@@ -22,7 +24,7 @@
         flex-direction: row !important;
         a {
             text-decoration: none;
-            color: rgb(243, 243, 243) !important;
+            color: $default !important;
             &.link-active {
                 &::after {
                     transform: scaleX(1);
@@ -32,7 +34,7 @@
             &::after {
                 display: block;
                 content: "";
-                border-bottom: solid 3px #ececec;
+                border-bottom: solid 3px #56624d;
                 transform: scaleX(0);
                 transition: transform 400ms;
                 transform-origin: 100% 50%;
@@ -40,6 +42,15 @@
             &:hover:after {
                 transform: scaleX(1);
             }
+        }
+    }
+    .appbar-social {
+        border: 1px solid white !important;
+        border-radius: 2rem;
+        padding: 0.45rem 0.5rem !important;
+        button {
+            color: white !important;
+            font-size: 1rem;
         }
     }
 }
