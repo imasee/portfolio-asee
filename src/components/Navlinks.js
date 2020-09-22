@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
 const NavLink = React.memo(({ to, className, children, pathname }) => {
-    const match = useLocation();
-    const [active, setActive] = useState(false);
+    // const match = useLocation();
+    const [active,
+        //  setActive
+    ] = useState(false);
 
     function handleScrollToElement(element) {
         const offset = 66;
