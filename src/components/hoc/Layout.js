@@ -15,7 +15,7 @@ export default function Layout({ children }) {
     return (
         <React.Fragment>
             <Appbar />
-            <div className="container-fluid p-0" style={{ width: "100vw", overflowY: "auto", overflowX: "hidden" }}>
+            <div className="container-fluid p-0" style={{ width: "100vw", overflowX: "hidden" }}>
                 {children}
             </div>
             <Footer />
