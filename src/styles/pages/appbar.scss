@@ -2,7 +2,7 @@
     font-family: "Heebo", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    height: 86px !important;
+    height: 66px !important;
     margin: auto 0;
     left: 0 !important;
     width: 100vw !important;
@@ -10,31 +10,51 @@
     &.transparent {
         background-color: transparent !important;
         .navbar-nav a {
-            color: $default !important;
+            color: $light !important;
+            &.link-active {
+                &::after {
+                    border-bottom: solid 3px $light;
+                }
+            }
+            &::after {
+                border-bottom: solid 3px $white;
+            }
         }
     }
     &.solid {
         background-color: $primary !important;
-        background: linear-gradient(to right, #1c2324, #b1c1ae) !important;
+        background: linear-gradient(to left, #414c58 0%, #29323c 100%);
         .navbar-nav a {
+            color: $light !important;
+            &.link-active {
+                &::after {
+                    border-bottom: solid 3px $light;
+                }
+            }
+            &::after {
+                border-bottom: solid 3px $white;
+                border-radius: 10px;
+                content: "";
+            }
         }
     }
     .navbar-nav {
         display: flex !important;
         flex-direction: row !important;
+        justify-content: flex-end;
         a {
             text-decoration: none;
             color: $default !important;
             &.link-active {
                 &::after {
                     transform: scaleX(1);
-                    border-bottom: solid 3px #00ddfa;
+                    border-bottom: solid 3px $default;
                 }
             }
             &::after {
                 display: block;
                 content: "";
-                border-bottom: solid 3px #56624d;
+                border-bottom: solid 3px $primary-dark;
                 transform: scaleX(0);
                 transition: transform 400ms;
                 transform-origin: 100% 50%;
@@ -45,11 +65,11 @@
         }
     }
     .appbar-social {
-        border: 1px solid white !important;
+        border: 1px solid $light !important;
         border-radius: 2rem;
         padding: 0.45rem 0.5rem !important;
         button {
-            color: white !important;
+            color: $light !important;
             font-size: 1rem;
         }
     }

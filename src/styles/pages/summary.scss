@@ -1,9 +1,28 @@
 .summary {
-    min-height: calc(100vh - 86px);
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    background: #a6b2a3;
+    min-height: 60vh;
+    color: $light;
+    position: relative;
+    background-color: rgb(31, 31, 31);
+    .content {
+        position: relative;
+        z-index: 3;
+    }
+    &-bg {
+        position: absolute;
+        bottom: 0;
+        right: 6rem;
+        height: 80%;
+        width: auto;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .summary {
+        &-bg {
+            right: 2rem;
+            height: 40%;
+            width: 20%;
+        }
+    }
 }
