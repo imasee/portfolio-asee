@@ -75,7 +75,7 @@ export default function () {
                         content="Microsoft visual studio, Microsoft visual studio code, Eclipse, MS Office (Word,
                             Excel, PowerPoint), MySQL Workbench, Postman"
                         icon={
-                            <i class="fas fa-desktop pl-2 fa-2x"></i>
+                            <i className="fas fa-desktop pl-2 fa-2x"></i>
                         }
                     />
                     <Divider variant="inset" component="li" />

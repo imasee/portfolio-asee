@@ -14,7 +14,7 @@ const ProgressProvider = ({ valueStart, valueEnd, children }) => {
 export default function ({
   percentage = 0,
   pathColor = "#C03D04",
-  textColor = "#282828",
+  textColor = "#fff",
   trailColor = "black",
   backgroundColor = "rgba(0,0,0,0)"
 }) {
