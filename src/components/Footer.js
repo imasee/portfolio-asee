@@ -9,7 +9,7 @@ export default React.memo(function Footer() {
         //  Footer
         <React.Fragment>
             <Divider className="footer-divider" />
-            <footer className="footer">
+            <footer className="footer pl-3">
                 <div className="social">
                     <FooterSocialLinks />
                 </div>

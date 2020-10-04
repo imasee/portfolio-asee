@@ -1,4 +1,5 @@
 import React from 'react';
+import Section from './section/Section';
 
 
 let summary = `Driven full-stack software developer, familiar with a wide range of programming utilities and
@@ -9,22 +10,11 @@ contribute to team success.`;
 
 export default () => {
     return (
-        <div className="summary m-0 p-0">
-            <div className="row d-flex flex-md-row-reverse p-5">
-                {/* <div className="vector col-12 col-md-4">
-                    <div className="mr-auto mx-md-auto ml-3" style={{ backgroundImage: "url('/svg-assets/summary.svg')" }} />
-                </div> */}
-                <div className="col-12 col-md-12 head">
-                    <p className="header col"> Summary</p>
-
-                    <p className="content col-12">
-                        {summary}
-                    </p>
-                </div>
-
-
-            </div>
-        </div>
-
+        <Section heading="summary">
+            <p className="content text-left py-3">
+                {summary}
+            </p>
+            <img src="/svg-assets/summary.svg" alt="Summary background" className="summary-bg" />
+        </Section>
     )
 }

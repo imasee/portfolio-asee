@@ -3,7 +3,7 @@ import { IconButton, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   iconButton: {
-    padding: theme.spacing(1),
+    padding: theme.spacing(.5),
     margin: "auto",
     '&:active,&:focus ': {
       outline: "none"

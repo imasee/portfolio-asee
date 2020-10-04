@@ -16,9 +16,9 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: theme.shadows[6],
     },
     avatar: {
-        width: theme.spacing(6),
-        height: theme.spacing(6),
-        border: "1px solid white",
+        width: theme.spacing(5),
+        height: theme.spacing(5),
+        border: "1px solid #d4d4d4",
         boxShadow: theme.shadows[10]
     }
 }));

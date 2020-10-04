@@ -5,32 +5,64 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    &-bg {
+        height: 100% !important;
+        width: 100vw !important;
+        position: absolute;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        object-fit: fill;
+        // animation: topSlideIn 3s ease-in 0.2s 1 forwards;
+        animation: topSlideIn 2.5s ease-out 0.1s 1 forwards;
+        transition: top 0.3s ease-in-out;
+    }
     .title {
-        // border-left: 5px solid;
-        margin-left: 34%;
         font-size: 2rem;
         z-index: 5;
+        margin-left: 10rem;
         text-transform: capitalize;
         // border-left: 5px solid white;
         padding-left: 1rem;
+        margin-top: -10rem;
         .name-intro {
-            display: block;
+            span {
+                display: none;
+            }
             .name {
-                color: #56614d;
                 display: block;
-                font-size: 4rem;
+                line-height: 5rem;
+                color: $light;
+                display: block;
+                font-size: 5rem;
                 font-weight: 900;
-                border-bottom: 5px solid white;
+                // border-bottom: 5px solid white;
                 text-shadow: $text-shadow-dark;
             }
         }
         .designation {
+            color: $white-fade;
+            font-size: 1.5rem;
         }
     }
 }
 
 @media only screen and (max-width: 600px) {
     .landing {
+        &-bg {
+            height: 90% !important;
+            width: 100vw !important;
+            position: absolute;
+            top: -100%;
+            content: "";
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: 100% 100%;
+            background-position: center;
+            object-fit: fill;
+            animation: topSlideIn 2.5s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 forwards;
+        }
         .title {
             padding-top: 86px;
             margin-left: 0;
@@ -74,5 +106,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes topSlideIn {
+    0% {
+        top: -600px;
+    }
+    100% {
+        top: -20px;
     }
 }

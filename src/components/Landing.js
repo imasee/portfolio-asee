@@ -1,6 +1,4 @@
 import React, { Fragment } from "react";
-import LandingBackground from './LandingBackground';
-
 
 export function TitleDetail({ name = "Mohammed Asif", title = "Full stack web developer" }) {
   return (
@@ -15,9 +13,7 @@ export default () => {
   return (
     <Fragment>
       <div class="container-fluid landing p-0 m-0 ">
-        <LandingBackground>
-          <div style={{ backgroundImage: "url('/svg-assets/man.svg')" }} />
-        </LandingBackground>
+        <img src={'/svg-assets/landing.svg'} alt="Landing Svg background" class="landing-bg" width="100%" height="100%" />
         <TitleDetail />
       </div>
     </Fragment>
