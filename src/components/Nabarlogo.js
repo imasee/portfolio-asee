@@ -30,7 +30,10 @@ export default memo(function () {
         <div className={classes.root} >
             <SocialMediaLinks className={[classes.appBarSocial, "appbar-social"].join(" ")} />
             <Tooltip title="User">
-                <Avatar classes={{ root: classes.avatar }} alt="Mohammed Asif" src="https://i.picsum.photos/id/1012/3973/2639.jpg?hmac=s2eybz51lnKy2ZHkE2wsgc6S81fVD1W2NKYOSh8bzDc" className={classes.small} />
+                <Avatar classes={{ root: classes.avatar }}
+                    alt="Mohammed Asif"
+                //   src="https://i.picsum.photos/id/1012/3973/2639.jpg?hmac=s2eybz51lnKy2ZHkE2wsgc6S81fVD1W2NKYOSh8bzDc" className={classes.small} 
+                >MA</Avatar>
             </Tooltip>
         </div>
     );
