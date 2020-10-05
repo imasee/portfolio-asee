@@ -1,0 +1,35 @@
+
+@import '../../styles/variables';
+
+.section{
+  padding: 56px 5rem !important;
+  text-align: left;
+  &__header{
+    letter-spacing: 2px;
+    display: inline-block;
+    color: $primary-dark;
+    text-transform: capitalize; 
+    &::after{
+      content: "";
+      display: block;
+      width: 80%;
+      border: 5px solid;
+      transition: width .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      border-radius: 10px;
+    }
+  }
+  &:hover{
+    .section__header{
+      &::after{
+          width: 100%;
+      }
+    } 
+  }
+}
+
+
+@media only screen and (max-width: 768px){
+  .section{
+    padding: 56px 2rem !important;
+  }
+}

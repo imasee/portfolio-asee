@@ -1,0 +1,21 @@
+$primary-color: #2b5162;
+$secondary-color:rgb(255, 255, 255);
+$default-color:rgb(190, 190, 190);
+$dark: rgb(8, 8, 8);
+$primary-dark:#0f1726;
+
+//text colors
+
+$text-white:white;
+$text-light:rgb(192, 192, 192);
+$text-dark:rgb(37, 37, 37);
+$text-light-dark: rgb(71, 71, 71);
+
+
+//text-shadow
+$text-shadow: 0px 0px 20px transparentize($color: $text-light-dark, $amount: .5) ;
+
+//shadow
+$shadow-sm: 0px 0px 5px transparentize($color: $dark, $amount: .2);
+$shadow-md: 0px 0px 20px transparentize($color: $dark, $amount: .2);
+$shadow-lg: 0px 0px 35px transparentize($color: $dark, $amount: .2);
