@@ -1,0 +1,26 @@
+@import './styles/variables';
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+.hover{
+  &:hover{
+    box-shadow: $shadow-md;
+  }
+}
+

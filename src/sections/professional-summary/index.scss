@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.summary{
+  &__content{
+    position: relative;
+   
+    p{
+      position: relative;
+      //more button
+      height: calc(1.5rem * 5);
+      color: $text-dark;
+      letter-spacing: 1px; 
+      line-height: 1.5rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &.more{
+        height: auto !important;
+        -webkit-line-clamp: initial; 
+      }
+    }
+
+    //more button
+    .more-btn{
+      border: 1px solid transparentize($color: $text-light-dark, $amount: .5);
+      position: relative;
+     top: -.5rem;
+     color:  $text-dark ;
+    }
+  }
+}
+
+
