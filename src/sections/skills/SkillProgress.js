@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { Container, ProgressBar } from "react-bootstrap";
-import Icon from "../../components/Icon";
+// import Icon from "../../components/Icon";
 import "./skill-progress.scss";
 
 export default memo(function ({ label, progress = 0 }) {

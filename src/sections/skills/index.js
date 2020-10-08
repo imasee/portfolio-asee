@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import "./index.scss";
 import { Row, Col } from "react-bootstrap";
 import Section from "../../components/section";
-import SkewLeftBackground from "../../components/backgrounds/SkewLeftBackGround";
+// import SkewLeftBackground from "../../components/backgrounds/SkewLeftBackGround";
 import AllSkills from "./AllSkills";
 import TopSkills from "./TopSkills";
 

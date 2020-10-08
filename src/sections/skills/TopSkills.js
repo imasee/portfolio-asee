@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Container, ProgressBar, ListGroup } from "react-bootstrap";
+import { Container, ListGroup } from "react-bootstrap";
 import Icon from "../../components/Icon";
 import SkillProgress from "./SkillProgress";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import NameIntro from "./NameIntro";
-import { Container, Image } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 export default function () {
   return (
