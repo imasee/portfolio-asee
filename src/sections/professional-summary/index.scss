@@ -1,28 +1,27 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-.about-me{
+.about-me {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  &_wrapper{
+  &_wrapper {
     z-index: 5;
     position: relative;
   }
-  &__header{
-   
+  &__header {
   }
-  &__content{
+  &__content {
     position: relative;
-    padding:0 7rem !important;
+    padding: 0 7rem !important;
     //avatar
-    .avatar{
+    .avatar {
       display: block;
       margin: auto;
       box-shadow: $shadow-sm-light;
     }
     //name
-    .name{
+    .name {
       display: block;
       font-size: 1.4rem;
       line-height: 1.4rem;
@@ -31,7 +30,7 @@
       letter-spacing: 1px;
     }
     //rpole
-    .role{
+    .role {
       margin: auto;
       display: block;
       font-size: 1.1rem;
@@ -40,50 +39,54 @@
     }
     //test
     // TODO:Remove later
-    .test{
+    .test {
       max-width: 400px;
     }
 
     //summary
-    p{
-      text-align: left;
+    p {
+      padding-left: 5rem;
+      padding-right: 5rem;
+      text-align: center;
       margin-top: 1rem;
       font-weight: 300;
       position: relative;
       height: calc(1.5rem * 5);
       color: $primary-dark;
-      letter-spacing: 1px; 
+      letter-spacing: 1px;
       line-height: 1.5rem;
       display: -webkit-box;
       -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;  
+      -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: pre-wrap;
       //more button
-      &.more{
+      &.more {
         height: auto !important;
-        -webkit-line-clamp: initial; 
+        -webkit-line-clamp: initial;
       }
     }
 
     //more button
-    .more-btn{
-      border: 1px solid transparentize($color: $primary-light, $amount: .3);
+    .more-btn {
+      border: 1px solid transparentize($color: $primary-light, $amount: 0.3);
       position: relative;
-     top: -.5rem;
-     color:  $text-dark ;
+      top: -0.5rem;
+      color: $text-dark;
     }
   }
 }
 
-
-
-@media only screen and (max-width: 768px){
-  .about-me{
-    &__content{
-    padding-left: 2rem  !important;
-    padding-right: 2rem  !important;
+@media only screen and (max-width: 768px) {
+  .about-me {
+    &__content {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+      p {
+        padding-left: 0rem;
+        padding-right: 0rem;
+      }
+    }
   }
-}
 }

@@ -1,15 +1,15 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-.landing{
+.landing {
   height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   font-family: "Barlow", sans-serif !important;
   //background
-  &__bg{
+  &__bg {
     min-height: 600px;
     height: 110vh;
     width: 100%;
@@ -20,65 +20,63 @@
     object-fit: fill;
     background-repeat: no-repeat;
     z-index: 0;
-     // TODO:REMOVE - use react-reveal intsead
+    // TODO:REMOVE - use react-reveal intsead
     opacity: 0;
-    animation: fadeIn .8s ease-in-out .1s 1 forwards !important;
-    // 
+    animation: fadeIn 0.8s ease-in-out 0.1s 1 forwards !important;
+    //
   }
 
   //bg div
-  &-skew{
-    content:"";
+  &-skew {
+    content: "";
     height: 80%;
     width: 100%;
     position: absolute;
     top: 50%;
     left: 0;
-    background: linear-gradient(90deg, #232C3B 0%, #1E2532 99.7%);
+    background: linear-gradient(90deg, #232c3b 0%, #1e2532 99.7%);
     transform: skewY(10deg) translateY(-50%);
-    
   }
 
   // name and intro
-  .name__intro{
-   
+  .name__intro {
     position: relative;
     z-index: 2;
     margin: auto;
     width: 100%;
     //info
-    &_info{
-       // TODO:REMOVE - use react-reveal intsead
-      // opacity: 0;
-      // animation: fadeIn .6s ease-in 1s 1 forwards;
+    &_info {
+      // TODO:REMOVE - use react-reveal intsead
+      opacity: 0;
+      animation: fadeIn 0.6s ease-in 1s 1 forwards;
       //
       color: $text-light;
       text-shadow: $shadow-sm;
       text-transform: capitalize;
       font-weight: 900;
-      
-      &-greeting{
+
+      &-greeting {
         font-size: 3.5rem;
         font-weight: 300;
         display: none;
         line-height: 4rem;
       }
-      &-name{
+      &-name {
         // TODO:REMOVE - use react-reveal intsead
-        // opacity: 0;
-        // animation: fadeIn .7s ease-in 1.3s 1 forwards;
-        // 
+        opacity: 0;
+        animation: fadeIn 0.7s ease-in 1.3s 1 forwards;
+        //
         font-size: 3.5rem;
         color: $text-white;
         font-weight: 700;
         line-height: 4rem;
         letter-spacing: 2px;
       }
-      &-designation{
-          // TODO:REMOVE - use react-reveal intsead
-        // opacity: 0;
-        // animation: fadeIn .7s ease 2s 1 forwards;
-        // 
+      &-designation {
+        // TODO:REMOVE - use react-reveal intsead
+        opacity: 0;
+        animation: fadeIn 0.7s ease 2s 1 forwards;
+        //
         letter-spacing: 2px;
         font-weight: 300;
         display: block;
@@ -86,95 +84,92 @@
         text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.397);
       }
 
-       //button
-    &-btn{
-       // TODO:REMOVE - use react-reveal intsead
-      // opacity: 0;
-      // animation: fadeIn .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3.5s 1 forwards;
-      // 
-      text-shadow: none;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: $shadow-sm;
-      transition: box-shadow .7s;
-      // background: linear-gradient(90deg, #ABBAB8 0%, #FFFFFF 100%);
-      color: $primary-dark;
-      &:hover{
-        box-shadow: $shadow-md;
-      }
-      .download{
+      //button
+      &-btn {
+        // TODO:REMOVE - use react-reveal intsead
+        opacity: 0;
+        animation: fadeIn 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3.5s 1 forwards;
+        //
+        text-shadow: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: $shadow-sm;
+        transition: box-shadow 0.7s;
+        // background: linear-gradient(90deg, #ABBAB8 0%, #FFFFFF 100%);
         color: $primary-dark;
-      }
-      &:active,&:focus{
-        background: rgba($color: $text-white, $alpha: .9)
-      }
-      .btn{
-        padding: .8rem .5rem!important;
-        letter-spacing: 1px;
-        font-weight: 400;
-        background: transparent;
-        outline: none;
-        border: none;
-        color: $primary-dark !important;
-        &:active,&:focus{
-          background: transparent; 
-          // background: rgba($color: $text-light, $alpha: .8)
+        &:hover {
+          box-shadow: $shadow-md;
+        }
+        .download {
+          color: $primary-dark;
+        }
+        &:active,
+        &:focus {
+          background: rgba($color: $text-white, $alpha: 0.9);
+        }
+        .btn {
+          padding: 0.5rem 1rem !important;
+          letter-spacing: 1px;
+          font-weight: 400;
+          background: transparent;
+          outline: none;
+          border: none;
+          color: $primary-dark !important;
+          &:active,
+          &:focus {
+            background: transparent;
+            // background: rgba($color: $text-light, $alpha: .8)
+          }
         }
       }
-      
     }
-    }
-
-   
   }
 }
 
 //TODO:Remove
 @keyframes fadeIn {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-
-
-@media only screen and (max-width: 768px){
-  .landing{
-    &-skew{
+@media only screen and (max-width: 768px) {
+  .landing {
+    &-skew {
       transform: skewY(14deg) translateY(-48%);
       height: 90%;
     }
-    .name__intro{
-      &_info{
+    .name__intro {
+      &_info {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        &-greeting{
+        &-greeting {
           font-size: 1rem;
           display: block;
           line-height: 1.8rem;
         }
-        &-name{
+        &-name {
           font-size: 2.5rem;
           line-height: 3.2rem;
           text-align: center !important;
         }
-        &-designation{
+        &-designation {
           text-align: center !important;
           font-size: 1rem;
         }
-        &-btn{
+        &-btn {
           margin: 1rem 0 !important;
-          padding: 0 .5rem !important;
-          font-size: .8rem !important;
-         .download >i{ 
-           font-size: .8rem !important;
-         }
+          padding: 0 0.5rem !important;
+          font-size: 0.8rem !important;
+          .download > i {
+            font-size: 0.8rem !important;
+          }
         }
       }
     }

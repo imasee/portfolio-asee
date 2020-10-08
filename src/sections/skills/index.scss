@@ -1,52 +1,52 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-.my-skills{
+.my-skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  &__header{
-   
+  align-items: flex-start;
+  &__header {
+    padding: 0 7rem !important;
   }
-  &__content{
+  &__content {
     position: relative;
-    text-align:  !important;
-    padding:0 7rem !important;
+    text-align: left !important;
+    padding: 0 7rem !important;
   }
-  p{
-    margin-top: 1rem;
+  p {
+    height: auto;
+    margin: 1rem 0 !important;
     font-weight: 300;
     position: relative;
     height: calc(1.5rem * 5);
     color: $primary-dark;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
     line-height: 1.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: pre-wrap;
     //more button
+  }
 }
-}
-
 
 //section sub heading
-.section_subheading{
+.section_subheading {
   font-size: 1.2rem;
   color: $primary-light;
   display: inline-block;
-  &_p1{
-font-weight: 100;
+  &_p1 {
+    font-weight: 100;
   }
-  &_p2{
+  &_p2 {
     font-weight: 600;
     color: $primary-dark;
   }
-  &::after{
+  &::after {
     content: "";
-    margin-top: .2rem;
+    margin-top: 0.2rem;
     background: $primary-light;
     display: block;
     border: 1px solid;
@@ -55,44 +55,43 @@ font-weight: 100;
   }
 }
 
-
-//list 
-.list-group{
-  &-item{
+//list
+.list-group {
+  &-item {
     border: none;
   }
 }
 
-
 //all skills
-.skills_pills{
+.skills_pills {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  .badge{
-    margin: .3rem .2rem;
-    padding: .7rem 1rem !important;
+  .badge {
+    margin: 0.3rem 0.2rem;
+    padding: 0.7rem 1rem !important;
     flex-grow: 1;
     font-weight: 300;
-    border: 1px solid  transparentize($color: $primary-dark, $amount: 0.5);
-    &:nth-child(odd){
-    background: transparent;
-    color: $primary-dark;
-    }
-    &:nth-child(even){
+    border: 1px solid transparentize($color: $primary-dark, $amount: 0.5);
+    &:nth-child(odd) {
       background: transparent;
-    color: $primary-dark;
+      color: $primary-dark;
+    }
+    &:nth-child(even) {
+      background: transparent;
+      color: $primary-dark;
     }
   }
 }
 
-
-@media only screen and (max-width: 768px){
-  .my-skills{
-    &__content{
-    padding-left: 2rem  !important;
-    padding-right: 2rem  !important;
+@media only screen and (max-width: 768px) {
+  .my-skills {
+    &__header {
+      padding: 0 2rem !important;
+    }
+    &__content {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
   }
 }
-}
-

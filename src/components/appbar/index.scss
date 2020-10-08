@@ -1,63 +1,71 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-.navbar{
+.navbar {
   background: transparent !important;
 
   //brand
-  &-brand{
-      color: $text-white !important;
+  &-brand {
+    color: $text-white !important;
   }
 
   //menu icon
-  .navbar-toggler{
-    color: $primary-dark;
+  .navbar-toggler {
+    color: $primary-light;
     border: 0;
-    &:hover{
-      opacity: .8;
+    &:hover {
+      opacity: 0.8;
     }
   }
-  
+
   //nav
-  &-nav{
-      .nav-link{
-          &::after{
-              content: "";
-              display: block;
-              border:3px solid;
-              width: 70%;
-              height: 5px;
-              transform: scale(0);
-              transition: transform .4s;
-              transform-origin: left;
-              border-radius: 3rem;
-          }
-          &:hover{
-              &::after{
-                  transform: scale(1);
-              }
-          }
+  &-nav {
+    .nav-link {
+      color: $primary-light !important;
+      &::after {
+        content: "";
+        display: block;
+        border: 3px solid $primary-light;
+        width: 70%;
+        height: 5px;
+        transform: scale(0);
+        transition: transform 0.4s;
+        transform-origin: left;
+        border-radius: 3rem;
       }
+      &:hover {
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
   }
 
   //solid style
-  &.solid{
-    background: linear-gradient(to left, #dddddd 24.3%, #FFFFFF 79.07%) !important;
+  &.solid {
+    background: linear-gradient(to left, #dddddd 24.3%, #ffffff 79.07%) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.651);
     //brand
-    .navbar-brand{
+    .navbar-brand {
       color: rgb(55, 63, 65) !important;
-    } 
+    }
   }
+  //solid style
+  // &.transparent {
+  //   background: transparent !important;
+  //   //brand
+  //   .navbar-brand {
+  //     color: rgb(255, 255, 255) !important;
+  //   }
+  // }
 }
 
-
-@media only screen and (max-width: 768px){
-  .navbar{
-    &-nav{
-      border-top: 1px solid transparentize($color: $text-light-dark, $amount: .8);
-      .nav-link{
-        &::after{
-            border:none;
+@media only screen and (max-width: 768px) {
+  .navbar {
+    &-nav {
+      border-top: 1px solid transparentize($color: $text-light-dark, $amount: 0.8);
+      .nav-link {
+        &::after {
+          border: none;
         }
       }
     }

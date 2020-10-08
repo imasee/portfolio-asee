@@ -15,13 +15,13 @@ export default memo(function () {
       /> */}
 
       <div className="my-skills_wrapper">
-        <p className=" text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et dui
-          ullamcorper, hendrerit dui ut, tristique urna. Sed ultricies ornare
-          est at pulvinar..
-        </p>
-        <Row className="w-100 mx-0 d-flex flex-column-reverse flex-md-row">
+        <Row className="w-100 mx-0 d-flex flex-column flex-md-row">
           <Col sm={12} md className="px-0">
+            <p className="text-left pl-0 pr-0 pr-md-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et dui
+              ullamcorper, hendrerit dui ut, tristique urna. Sed ultricies ornare
+              est at pulvinar..
+        </p>
             <AllSkills />
           </Col>
           <Col sm={12} md className="px-0">
