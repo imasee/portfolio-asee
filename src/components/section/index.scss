@@ -1,0 +1,51 @@
+
+@import '../../styles/variables';
+
+.section{
+
+  font-family: 'Heebo', sans-serif;
+  padding: 56px 0rem !important;
+  overflow: hidden;
+  position: relative !important;
+  &__header{
+    font-size: 1.9rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    color: $primary-dark; 
+    text-transform: capitalize;
+    text-shadow: 0px 5px 10px rgba(104, 104, 104, 0.568);
+    span:nth-child(1){
+      font-weight: lighter;
+      display: inline-block;
+      color: $primary-light;
+    }
+    span:nth-child(2){
+      font-weight: bolder;
+      color: $primary-dark;
+    }
+    &::after{
+      content: "";
+      display: block;
+      width: 60%;
+      box-shadow: 0px 5px 10px rgba(104, 104, 104, 0.568);
+      background: $primary-light;
+      border: 3px solid $primary-light;
+      transition: width .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      border-radius: 10px;
+    }
+  }
+  &:hover{
+    .section__header{
+      &::after{
+          width: 100%;
+      }
+    } 
+  }
+}
+
+
+@media only screen and (max-width: 768px){
+  .section{
+    padding: 56px 0rem !important;
+  }
+}
