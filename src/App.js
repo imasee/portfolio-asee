@@ -6,6 +6,9 @@ import "./styles.scss";
 import Landing from "./sections/landing";
 //summary
 import Summary from "./sections/professional-summary";
+//skills
+import Skills from "./sections/skills";
+
 //navbar
 import Appbar from "./components/appbar";
 
@@ -15,6 +18,7 @@ export default function App() {
       <Appbar />
       <Landing />
       <Summary />
+      <Skills />
     </div>
   );
 }
