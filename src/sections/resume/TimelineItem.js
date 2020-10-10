@@ -7,78 +7,53 @@ import "./timeline-item.scss";
 const EdDuration = ({ from, to }) => (
   <div className="ed_duration">
     <span className="ed_duration_from">{from}</span>
-    <span className="ed_duration_to">{to ? to : "In Progress"}</span>
+    <span className="ed_duration_to">{to}</span>
   </div>
 );
 
-const EdTitle = ({ college, location }) => (
+const EdTitle = ({ institution, location }) => (
   <div className="ed_title">
-    <span className="ed_title_college">{college}</span>
+    <span className="ed_title_institution">{institution}</span>
     <span className="ed_title_location">{location}</span>
   </div>
 );
 
 const EdCourse = ({ degree, major }) => (
-  <div className="event_course">
-    <span className="ed_course_degree">{degree}</span>
-    <span className="ed_course_major">{major}</span>
+  <div className="ed_course">
+    <span className="ed_course_degree">
+      Degree:<span>{degree}</span>
+    </span>
+    <span className="ed_course_major">
+      Major:<span>{major}</span>
+    </span>
   </div>
 );
 
 export default function () {
   return (
     <Container className="timeline_item">
-      <Timeline>
+      <Timeline lineStyle={{ width: "1px" }}>
         <TimelineEvent
-          title="Humber College"
-          subtitle="Postgraduate Diploma"
-          iconStyle={{
-            background: "transparent"
-          }}
-          titleStyle={{}}
+          className="timeline_item_content rounded"
+          container="card"
+          collapsible
+          title={<EdTitle institution="Humber College" location="Toronto,On" />}
+          subtitle={
+            <EdCourse
+              degree="Postgraduate Diploma"
+              major="Information Tecchnology Solutions"
+            />
+          }
           bubbleStyle={{
-            // background: "transparent",
             padding: "1rem",
-            border: "none",
+            border: "1px solid rgba(200,200,200,.5)",
             display: "flex",
             justifyContent: "center",
-            boxShadow: "0px 0px 10px rgba(60,60,60,.3)"
+            boxShadow: "0px 1px 16px rgba(200,200,200,.6)"
           }}
-          iconColor="green"
-          createdAt={<EdDuration from="2018" />}
+          createdAt={<EdDuration to="2018" />}
           icon={<Icon icon="fa-university" fontSize=".8rem" />}
-        >
-          Like we talked, you said that you would share the shipment details?
-          This is an urgent order and so I am losing patience. Can you expedite
-          the process and pls do share the details asap. Consider this a gentle
-          reminder if you are on track already!
-        </TimelineEvent>
-
-        <TimelineEvent
-          title="You sent an email to John Doe"
-          subtitle="hello there"
-          className="timeline_item"
-          iconStyle={{
-            background: "transparent"
-          }}
-          titleStyle={{}}
-          bubbleStyle={{
-            // background: "transparent",
-            padding: "1rem",
-            border: "none",
-            display: "flex",
-            justifyContent: "center",
-            boxShadow: "0px 0px 10px rgba(60,60,60,.3)"
-          }}
-          iconColor="green"
-          createdAt={<EdDuration from={2013} to={2016} />}
-          icon={<Icon icon="fa-university" fontSize=".8rem" />}
-        >
-          Like we talked, you said that you would share the shipment details?
-          This is an urgent order and so I am losing patience. Can you expedite
-          the process and pls do share the details asap. Consider this a gentle
-          reminder if you are on track already!
-        </TimelineEvent>
+        ></TimelineEvent>
       </Timeline>
     </Container>
   );
