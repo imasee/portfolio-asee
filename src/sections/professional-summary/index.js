@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState, memo } from "react";
 import "./index.scss";
 import Section from "../../components/section";
 import { Button, Image } from "react-bootstrap";
-import SkewRightBackground from "../../components/backgrounds/SkewRightBackground";
 
 export default memo(function () {
   const contentRef = useRef();
@@ -75,10 +74,6 @@ export default memo(function () {
           </Button>
         )}
       </div>
-      <SkewRightBackground
-        className="skewed-right-bottom"
-        preserveAspectRatio="none"
-      />
     </Section>
   );
 });

@@ -8,7 +8,8 @@ import Landing from "./sections/landing";
 import Summary from "./sections/professional-summary";
 //skills
 import Skills from "./sections/skills";
-
+//resume
+import Resume from "./sections/resume";
 //navbar
 import Appbar from "./components/appbar";
 
@@ -19,6 +20,7 @@ export default function App() {
       <Landing />
       <Summary />
       <Skills />
+      <Resume />
     </div>
   );
 }

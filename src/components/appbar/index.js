@@ -2,14 +2,13 @@ import React, { useRef, useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import "./index.scss";
 import Icon from "../Icon";
-import throttle from 'lodash.throttle';
-import NavLink from './NavLink';
+import throttle from "lodash.throttle";
+import NavLink from "./NavLink";
 
 export default function () {
-
   const [expanded, setExpanded] = useState(false);
-  const [navBackground, setNavBackground] = useState('transparent')
-  const navRef = React.useRef()
+  const [navBackground, setNavBackground] = useState("transparent");
+  const navRef = React.useRef();
   navRef.current = navBackground;
 
   // handle scroll to set app bar background on scroll
@@ -17,27 +16,30 @@ export default function () {
     const show = window.scrollY > 66;
     if (show) {
       if (!expanded) {
-        setNavBackground('solid');
+        setNavBackground("solid");
       }
     } else {
-      if (expanded) { setNavBackground('solid'); }
-      else { setNavBackground("transparent"); }
+      if (expanded) {
+        setNavBackground("solid");
+      } else {
+        setNavBackground("transparent");
+      }
     }
-  }
+  };
 
-  const throttledHandleWindowScroll = useRef(throttle(handleScroll, 500)).current;
+  const throttledHandleWindowScroll = useRef(throttle(handleScroll, 500))
+    .current;
 
   React.useEffect(() => {
     if (throttledHandleWindowScroll) {
-      window.addEventListener('scroll', throttledHandleWindowScroll);
+      window.addEventListener("scroll", throttledHandleWindowScroll);
     }
     return () => {
       if (throttledHandleWindowScroll) {
-        window.removeEventListener('scroll', throttledHandleWindowScroll);
+        window.removeEventListener("scroll", throttledHandleWindowScroll);
       }
-    }
+    };
   }, [throttledHandleWindowScroll]);
-
 
   let navbarClassList = [expanded ? "solid" : "", navBackground];
   return (
@@ -52,7 +54,6 @@ export default function () {
           setExpanded(true);
         } else {
           setExpanded(false);
-
         }
       }}
     >
@@ -63,12 +64,36 @@ export default function () {
       />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-md-auto text-left mt-3 mt-md-0">
-          <NavLink link="About" icon="fa-user" className="border-bottom border-sm-0 my-2 my-md-0" />
-          <NavLink link="Skills" icon="fa-cogs" className="border-bottom border-sm-0 my-2 my-md-0" />
-          <NavLink link="Education" icon="fa-university" className="border-bottom border-sm-0 my-2 my-md-0" />
-          <NavLink link="Resume" icon="fa-file" className="border-bottom border-sm-0 my-2 my-md-0" />
-          <NavLink link="Project" icon="fa-project-diagram" className="border-bottom border-sm-0 my-2 my-md-0" />
-          <NavLink link="Contact" icon="fa-address-card" className="my-2 my-md-0" />
+          <NavLink
+            link="About"
+            icon="fa-user"
+            className="border-bottom-xs my-2 my-md-0"
+          />
+          <NavLink
+            link="Skills"
+            icon="fa-cogs"
+            className="border-bottom-xs my-2 my-md-0"
+          />
+          <NavLink
+            link="Education"
+            icon="fa-university"
+            className="border-bottom-xs my-2 my-md-0"
+          />
+          <NavLink
+            link="Resume"
+            icon="fa-file"
+            className="border-bottom-xs my-2 my-md-0"
+          />
+          <NavLink
+            link="Project"
+            icon="fa-project-diagram"
+            className="border-bottom-xs my-2 my-md-0"
+          />
+          <NavLink
+            link="Contact"
+            icon="fa-address-card"
+            className="my-2 my-md-0"
+          />
         </Nav>
       </Navbar.Collapse>
     </Navbar>
