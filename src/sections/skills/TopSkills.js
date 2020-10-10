@@ -6,15 +6,15 @@ import SkillProgress from "./SkillProgress";
 export default memo(function (props) {
   return (
     <Container fluid className="text-left p-0">
-      <div className="section_subheading">
+      {/* <div className="section_subheading">
         <span className="mr-2">
           <Icon icon="fa-chart-bar" fontSize="1.2rem" />
         </span>
         <span className="section_subheading_p1 mr-1">Top</span>
         <span className="section_subheading_p2">Skills</span>
-      </div>
+      </div> */}
       {/* TODO:Use with array */}
-      <ListGroup className="w-100 my-3 mx-0">
+      <ListGroup className="w-100 my-0 mx-0">
         <ListGroup.Item variant="light" as="li" className="px-1">
           <SkillProgress label="React, Redux" progress={85} />
         </ListGroup.Item>

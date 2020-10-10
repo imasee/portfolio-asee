@@ -5,13 +5,13 @@ import Icon from "../../components/Icon";
 export default memo(function (props) {
   return (
     <Container fluid className="text-left p-0 pt-3 pt-md-0">
-      <div className="section_subheading">
+      {/* <div className="section_subheading">
         <span className="mr-2">
           <Icon icon="fa-cogs" fontSize="1.2rem" />
         </span>
         <span className="section_subheading_p1 mr-1">All</span>
         <span className="section_subheading_p2">Skills</span>
-      </div>
+      </div> */}
       <Container fluid className="skills_pills pl-0 pr-0 pr-md-5 my-3 py-3">
         <Badge pill variant="secondary py-1">
           React

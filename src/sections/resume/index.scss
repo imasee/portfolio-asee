@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+
+.my_resume{
+  &__header{
+    font-family: 'Inter', sans-serif;
+  }
+  &__content{
+    padding: 56px 7rem !important;
+  }
+}
