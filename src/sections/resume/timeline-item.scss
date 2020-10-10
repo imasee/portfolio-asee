@@ -1,93 +1,99 @@
-// @import '../../styles/variables';
+@import "../../styles/variables";
 
+.timeline_item {
+    section {
+        // margin-left: 2rem !important;
+        div:nth-child(2) {
+            .timeline_item_content {
+                // width: calc(100% - 2rem);
+                // top: -0.5rem;
 
-// .timeline_item {
-//   padding: 0 !important;
+                .ed_duration {
+                    color: transparentize($color: $primary-dark, $amount: 0.5);
+                    padding: 0.5rem 0.5rem 0rem 0.5rem;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    height: 1.2rem;
+                    // position: absolute;
+                    // left: -6rem;
 
+                    // top: 0.9rem;
+                    &_from {
+                        display: inline-block;
+                    }
+                    &_to {
+                        display: inline-block;
+                    }
+                    &_seperator {
+                        margin: 0rem 0.3rem !important;
+                        content: "-";
+                    }
+                }
 
-//       section {
-//         margin-left: 3rem !important;
-//           //line
-//           div:nth-child(1){
-//               background: transparentize($color: $primary-lighter, $amount: 0.4) !important;
-              
-//           }//line end
-          
-//           div:nth-child(2){
-//               background: rgba(255,255,255,0) !important;
-         
-//               //logo
-//               div:nth-child(1){
-//               background: rgb(255,255,255) !important;
-          
-//               }//logo end
-//               //card
-//               .timeline_item_content{
-//                   position: relative;
-//                   width: calc(100% - 3rem); 
-//                   top: -1rem;
-//                   background: transparent !important;
-//                   //duration
-//                   .ed_duration{
-//                       background: transparent !important;
-//                       color: $primary-dark;
-//                       position: absolute;
-//                       left: -6rem;
-//                       top: 1.3rem;
-//                       padding: 0rem 0rem !important;
-//                       font-size: 1rem !important;
-//                       font-weight: 500;
-                     
-//                         //from date
-//                       &_from{
-//                       }
-//                       //to date
-//                       &_to{
-//                         &::before{
-//                             content:"";
-//                             display: inline-block;
-//                             // margin: 0 .5rem;
-//                         }  
-//                       }
-                      
-//                   }//duration end
-                  
-//                   //title
-//                   .ed_title{
-//                       color: rgb(75,75,75);
-//                       padding: .2rem .5rem;
-//                       font-size: 1rem;
-//                         //institution
-//                       &_institution{
-//                           font-weight: 600;
-//                           letter-spacing: 1px;
-//                           &::after{
-//                               content: ",";
-//                               display: inline-block;
-//                               margin-right: .5rem;
-//                           }
-//                       }//institution end
-//                       //location
-//                       &_location{
-//                           font-size: .8rem;
-//                       }//location end
-//                   }//title end
-//                   .ed_course{
-//                        padding: 0rem .5rem;
-//                       font-size: 1rem;
-//                      //degree
-//                       &_degree{
-//                           display: block;
-      
-//                       }//degree end
-//                       //major
-//                        &_major{
-//                           display: block;
-//                       }//major end
-//                   }
-                  
-//               }//card end
-//           }
-//       }//section end
+                .ed_title {
+                    color: $primary-dark;
+                    padding: 0.5rem 0.5rem;
+                    font-size: 1rem;
+                    &_institution {
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        &::after {
+                            content: ",";
+                            display: inline-block;
+                            margin-right: 0.5rem;
+                        }
+                    }
+                    &_location {
+                        font-size: 0.9rem;
+                    }
+                }
 
-// }
+                .ed_sub {
+                    padding: 0rem 0.5rem;
+                    font-size: 0.9rem;
+                    margin-bottom: 1rem;
+                    &_main {
+                        display: block;
+                        font-weight: 500;
+                    }
+                    &_sec {
+                        display: block;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .timeline_item {
+        section {
+            margin-left: 0rem !important;
+            div:nth-child(2) {
+                .timeline_item_content {
+                    width: 100%;
+                    top: 0rem;
+                    .ed_duration {
+                        font-size: 0.8rem;
+                        position: relative !important;
+                        padding: 0.5rem 0.5rem !important;
+                        left: 0rem;
+                        height: 1rem;
+                        top: 0rem;
+                    }
+
+                    .ed_title {
+                        padding: 0.5rem 0.5rem 0rem 0.5rem;
+                        font-size: 1rem;
+                    }
+
+                    .ed_sub {
+                        padding: 0rem 0.5rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

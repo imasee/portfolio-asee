@@ -2,58 +2,49 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { Timeline, TimelineEvent } from "react-event-timeline";
 import Icon from "../../components/Icon";
+import { COLOR_PRIMARY, COLOR_PRIMARY_LIGHTER } from '../../utils/const';
+import { EdDuration, EdSubheading, EdTitle } from './time-line-components';
 import "./timeline-item.scss";
 
-const EdDuration = ({ from, to }) => (
-  <div className="ed_duration">
-    <span className="ed_duration_from">{from}</span>
-    <span className="ed_duration_to">{to}</span>
-  </div>
-);
+const lineStyles = {
+  width: "1px",
+  background: COLOR_PRIMARY_LIGHTER,
+  opacity: ".6",
+  boxShadow: "0px 1px 16px rgba(0,0,0,.9)"
+}
 
-const EdTitle = ({ institution, location }) => (
-  <div className="ed_title">
-    <span className="ed_title_institution">{institution}</span>
-    <span className="ed_title_location">{location}</span>
-  </div>
-);
+const iconStyle = {
+  color: COLOR_PRIMARY
+}
+const bubbleStyle = {
+  padding: "1rem",
+  border: `1px solid ${COLOR_PRIMARY_LIGHTER}`,
+  display: "flex",
+  justifyContent: "center",
+  boxShadow: "0px 1px 16px rgba(200,200,200,.6)"
+}
 
-const EdCourse = ({ degree, major }) => (
-  <div className="ed_course">
-    <span className="ed_course_degree">
-      Degree:<span>{degree}</span>
-    </span>
-    <span className="ed_course_major">
-      Major:<span>{major}</span>
-    </span>
-  </div>
-);
-
-export default function () {
+export default function ({ institution, location, role, roleSub, icon = "fa-university", datefrom, dateTo, }) {
   return (
     <Container className="timeline_item">
-      <Timeline lineStyle={{ width: "1px" }}>
+      <Timeline lineStyle={lineStyles}>
         <TimelineEvent
-          className="timeline_item_content rounded"
-          container="card"
-          collapsible
-          title={<EdTitle institution="Humber College" location="Toronto,On" />}
-          subtitle={
-            <EdCourse
-              degree="Postgraduate Diploma"
-              major="Information Tecchnology Solutions"
-            />
-          }
-          bubbleStyle={{
-            padding: "1rem",
-            border: "1px solid rgba(200,200,200,.5)",
-            display: "flex",
-            justifyContent: "center",
-            boxShadow: "0px 1px 16px rgba(200,200,200,.6)"
-          }}
-          createdAt={<EdDuration to="2018" />}
-          icon={<Icon icon="fa-university" fontSize=".8rem" />}
-        ></TimelineEvent>
+          iconStyle={iconStyle}
+          bubbleStyle={bubbleStyle}
+          className="timeline_item_content card rounded shadow"
+          title={<EdTitle
+            institution={institution}
+            location={location} />}
+          subtitle={<EdSubheading
+            main={role}
+            sec={roleSub} />}
+          createdAt={<EdDuration
+            to={dateTo} from={datefrom} />}
+          icon={<Icon
+            icon={icon}
+            fontSize=".8rem" />}
+        >
+        </TimelineEvent>
       </Timeline>
     </Container>
   );

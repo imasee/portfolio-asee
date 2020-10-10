@@ -1,6 +1,5 @@
 import React, { memo } from "react";
-import { Container, Badge } from "react-bootstrap";
-import Icon from "../../components/Icon";
+import { Badge, Container } from "react-bootstrap";
 
 export default memo(function (props) {
   return (

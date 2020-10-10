@@ -3,7 +3,7 @@
 .my-skills {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: flex-start;
   &__header {
     padding: 0 7rem !important;
@@ -13,7 +13,7 @@
     text-align: left !important;
     padding: 0 7rem !important;
   }
-  .text-auto{
+  .text-auto {
     height: auto;
     margin: 1rem 0 !important;
     font-weight: 300;
@@ -73,14 +73,14 @@
     flex-grow: 1;
     font-weight: 300;
     border: 1px solid transparentize($color: $primary-dark, $amount: 0.5);
-    &:hover{
-     background: $primary-light !important;
-     color: $text-white !important;
-     transition: background .6s !important;
-     transition: color .6s !important;
-     transition: box-shadow .6s !important;
-     box-shadow: $shadow-sm-light;
-     cursor: pointer;
+    &:hover {
+      background: $primary-light !important;
+      color: $text-white !important;
+      transition: background 0.6s !important;
+      transition: color 0.6s !important;
+      transition: box-shadow 0.6s !important;
+      box-shadow: $shadow-sm-light;
+      cursor: pointer;
     }
     &:nth-child(odd) {
       background: transparent;
