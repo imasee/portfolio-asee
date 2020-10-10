@@ -59,8 +59,26 @@
   // }
 }
 
+
+
+
+
 @media only screen and (max-width: 768px) {
+  
+  //border-bottom
+.border-bottom-xs{
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to right,  transparentize($color: $primary-light, $amount: 0.7) 0%, transparent 70%);
+  border-right: none;
+  border-left: none;
+  border-top: none;
+
+}
+
   .navbar {
+  
     &-nav {
       border-top: 1px solid transparentize($color: $text-light-dark, $amount: 0.8);
       .nav-link {
