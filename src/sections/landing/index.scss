@@ -11,15 +11,16 @@
   background: linear-gradient(to bottom, #0b1214 0%, #0b1416 99.7%);
   text-align: left;
   padding-left: 5rem;
+  overflow: hidden;
   &_vector {
     position: absolute;
     right: 0;
-    // background-size: contain;
-    // object-fit: fill;
-    // background-position: right;
-    // height: 100vh;
-    width: 100%;
-    // top: 50%;
+    background-size: cover;
+    object-fit: fill;
+    background-position: right;
+    height: auto;
+    width: 80%;
+    top: 20%;
     transform: translateX(40%);
   }
   //background
@@ -151,6 +152,11 @@
 @media only screen and (max-width: 768px) {
   .landing {
     padding-left: 0rem;
+    &_vector {
+      top: 30%;
+      width: 100%;
+      transform: translateX(50%);
+    }
     .name__intro {
       &_info {
         display: flex;
@@ -159,7 +165,7 @@
         justify-content: center;
         &-greeting {
           font-size: 1rem;
-          display: block;
+          // display: block;
           line-height: 1.8rem;
         }
         &-name {

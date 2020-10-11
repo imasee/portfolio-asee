@@ -33,7 +33,7 @@ export default memo(function () {
     <Section className="about-me" headingFirst="About" headingSecond="Me">
       <div className="about-me_wrapper">
         <Image
-          className="avatar mt-3"
+          className="avatar my-4"
           src="https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY"
           roundedCircle
           height="100px"
@@ -41,9 +41,9 @@ export default memo(function () {
         />
 
         <span className="name mt-2">Mohammed Asif</span>
-        <span className="role">Full stack developer</span>
+        <span className="role mb-2">Full stack developer</span>
         <Image
-          className="test mt-3"
+          className="test my-3"
           src="/assets/test/aboutme.svg"
           height="100px"
           width="100%"
