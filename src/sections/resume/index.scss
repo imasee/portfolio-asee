@@ -1,10 +1,37 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-.my_resume{
-  &__header{
-    font-family: 'Inter', sans-serif;
+.my_resume {
+  &__header {
+    padding-left: 0rem !important;
   }
-  &__content{
-    padding: 56px 7rem !important;
+  &_heading {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: transparentize($color: $primary-dark, $amount: 0.5);
+  }
+  &__content {
+    padding: 0px 7rem !important;
+    .my_resume_educations,
+    .my_resume_experiences {
+      margin-left: -2.4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .my_resume {
+    &__header {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+    &__content {
+      padding: 0px 2rem !important;
+      .my_resume_educations,
+      .my_resume_experiences {
+        margin-left: 0rem;
+        &_heading {
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import { Container, ListGroup } from "react-bootstrap";
-import Icon from "../../components/Icon";
 import SkillProgress from "./SkillProgress";
 
 export default memo(function (props) {

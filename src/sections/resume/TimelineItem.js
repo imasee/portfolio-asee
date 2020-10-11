@@ -1,85 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Timeline, TimelineEvent } from "react-event-timeline";
 import Icon from "../../components/Icon";
+import { COLOR_PRIMARY_LIGHTER } from '../../utils/const';
+import { ButtonMore, EdDuration, EdSubheading, EdTitle } from './time-line-components';
 import "./timeline-item.scss";
 
-const EdDuration = ({ from, to }) => (
-  <div className="ed_duration">
-    <span className="ed_duration_from">{from}</span>
-    <span className="ed_duration_to">{to ? to : "In Progress"}</span>
-  </div>
-);
+const lineStyles = {
+  width: "1px",
+  background: COLOR_PRIMARY_LIGHTER,
+  opacity: ".6",
+  boxShadow: "0px 1px 16px rgba(0,0,0,.9)"
+}
 
-const EdTitle = ({ college, location }) => (
-  <div className="ed_title">
-    <span className="ed_title_college">{college}</span>
-    <span className="ed_title_location">{location}</span>
-  </div>
-);
+const iconStyle = {
+  color: "#17b794",
+}
+const bubbleStyle = {
+  padding: "1rem",
+  border: `1px solid ${COLOR_PRIMARY_LIGHTER}`,
+  display: "flex",
+  background: "rgb(27,34,41)",
+  justifyContent: "center",
+  boxShadow: "0px 1px 16px rgba(11,19,21,.6)"
+}
 
-const EdCourse = ({ degree, major }) => (
-  <div className="event_course">
-    <span className="ed_course_degree">{degree}</span>
-    <span className="ed_course_major">{major}</span>
-  </div>
-);
+export default function ({ children, institution, location, role, roleSub, icon = "fa-university", type, datefrom, dateTo, className, logo }) {
 
-export default function () {
+  const [isShowDetails, setShowDetails] = useState(false);
+
+  function handleToggleShowDetails() {
+    setShowDetails(prev => (!prev))
+  }
+
   return (
-    <Container className="timeline_item">
-      <Timeline>
+    <Container className="timeline_item" fluid>
+      <Timeline lineStyle={lineStyles}>
         <TimelineEvent
-          title="Humber College"
-          subtitle="Postgraduate Diploma"
-          iconStyle={{
-            background: "transparent"
+          iconStyle={iconStyle}
+          bubbleStyle={bubbleStyle}
+          className={["timeline_item_content card rounded shadow ", children && "pb-5", className === "left" ? "left" : ""].join(" ")}
+          title={<EdTitle
+            institution={institution}
+            location={location} />}
+          subtitle={<EdSubheading
+            main={role}
+            sec={roleSub} />}
+          createdAt={<EdDuration
+            to={dateTo} from={datefrom} />}
+          icon={
+            <Icon
+              icon={icon}
+              fontSize=".8rem" />}
+          buttons={children && <ButtonMore
+            className="btn-circle shadow-sm"
+            title={isShowDetails ? "Hide Description" : "Show Description"}
+            text={isShowDetails ? <Icon icon="fa-ellipsis-v" fontSize=".8rem" /> : <Icon icon="fa-ellipsis-h" fontSize=".8rem" />}
+            handleClick={handleToggleShowDetails}
+          />}
+          contentStyle={{
+            background: "#1f262d",
+            width: "100%"
           }}
-          titleStyle={{}}
-          bubbleStyle={{
-            // background: "transparent",
-            padding: "1rem",
-            border: "none",
-            display: "flex",
-            justifyContent: "center",
-            boxShadow: "0px 0px 10px rgba(60,60,60,.3)"
-          }}
-          iconColor="green"
-          createdAt={<EdDuration from="2018" />}
-          icon={<Icon icon="fa-university" fontSize=".8rem" />}
         >
-          Like we talked, you said that you would share the shipment details?
-          This is an urgent order and so I am losing patience. Can you expedite
-          the process and pls do share the details asap. Consider this a gentle
-          reminder if you are on track already!
-        </TimelineEvent>
-
-        <TimelineEvent
-          title="You sent an email to John Doe"
-          subtitle="hello there"
-          className="timeline_item"
-          iconStyle={{
-            background: "transparent"
-          }}
-          titleStyle={{}}
-          bubbleStyle={{
-            // background: "transparent",
-            padding: "1rem",
-            border: "none",
-            display: "flex",
-            justifyContent: "center",
-            boxShadow: "0px 0px 10px rgba(60,60,60,.3)"
-          }}
-          iconColor="green"
-          createdAt={<EdDuration from={2013} to={2016} />}
-          icon={<Icon icon="fa-university" fontSize=".8rem" />}
-        >
-          Like we talked, you said that you would share the shipment details?
-          This is an urgent order and so I am losing patience. Can you expedite
-          the process and pls do share the details asap. Consider this a gentle
-          reminder if you are on track already!
+          {isShowDetails && children}
         </TimelineEvent>
       </Timeline>
-    </Container>
+    </Container >
   );
 }

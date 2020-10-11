@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.footer {
+    color: $text-light;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem !important;
+    background: linear-gradient(to right, #171c21 0%, #171e24 99.7%) !important;
+
+    &_text_content {
+        color: $text-dark !important;
+    }
+    &_social {
+        flex-grow: 1;
+        text-align: right;
+        i {
+            color: $text-dark !important;
+        }
+    }
+}

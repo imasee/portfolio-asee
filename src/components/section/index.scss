@@ -1,51 +1,51 @@
+@import "../../styles/variables";
 
-@import '../../styles/variables';
-
-.section{
-
-  font-family: 'Heebo', sans-serif;
+.section {
+  font-family: "Heebo", sans-serif;
   padding: 56px 0rem !important;
   overflow: hidden;
   position: relative !important;
-  &__header{
+  &__header {
     font-size: 1.9rem;
     letter-spacing: 2px;
     display: inline-block;
-    color: $primary-dark; 
     text-transform: capitalize;
+    margin-bottom: 4rem !important;
     // text-shadow: 0px 5px 10px rgba(104, 104, 104, 0.568);
-    span:nth-child(1){
+    span:nth-child(1) {
       font-weight: lighter;
       display: inline-block;
+      // color: $primary-light;
+      color: $text-white;
+    }
+    span:nth-child(2) {
+      font-weight: bolder;
       color: $primary-light;
     }
-    span:nth-child(2){
-      font-weight: bolder;
-      color: $primary-dark;
-    }
-    &::after{
+    &::after {
       content: "";
       display: block;
-      width: 60%;
+      width: 0%;
       // box-shadow: 0px 1px 5px rgba(168, 168, 168, 0.968);
-      background: transparentize($color: $primary-light, $amount: .7);
-      border: 2px solid transparentize($color: $primary-light, $amount: .8);
-      transition: width .5s ease-in-out;
+      background: transparentize($color: $primary-light, $amount: 0.7);
+      // border: 2px solid transparentize($color: $primary-light, $amount: 0.8);
+      transition: width 0.5s ease-in-out;
       border-radius: 10px;
     }
   }
-  &:hover{
-    .section__header{
-      &::after{
-          width: 100%;
-      }
-    } 
+  &__content {
   }
+  // &:hover {
+  //   .section__header {
+  //     &::after {
+  //       width: 100%;
+  //     }
+  //   }
+  // }
 }
 
-
-@media only screen and (max-width: 768px){
-  .section{
+@media only screen and (max-width: 768px) {
+  .section {
     padding: 56px 0rem !important;
   }
 }

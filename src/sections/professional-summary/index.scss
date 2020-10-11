@@ -26,7 +26,8 @@
       font-size: 1.4rem;
       line-height: 1.4rem;
       font-weight: 500;
-      color: $primary-dark;
+      // color: $primary-color;
+      color: transparentize($color: $primary-light, $amount: 0.2);
       letter-spacing: 1px;
     }
     //rpole
@@ -34,13 +35,16 @@
       margin: auto;
       display: block;
       font-size: 1.1rem;
-      color: $primary-dark;
+      // color: $primary-dark;
+      color: transparentize($color: $text-dark, $amount: 0.5);
       font-weight: 100;
     }
     //test
     // TODO:Remove later
     .test {
       max-width: 400px;
+      border-radius: 10px;
+      filter: brightness(70%) contrast(190%) hue-rotate(60deg) sepia(15%) invert(300%);
     }
 
     //summary
@@ -52,7 +56,7 @@
       font-weight: 300;
       position: relative;
       height: calc(1.5rem * 5);
-      color: $primary-dark;
+      color: $text-white;
       letter-spacing: 1px;
       line-height: 1.5rem;
       display: -webkit-box;
@@ -70,10 +74,17 @@
 
     //more button
     .more-btn {
-      border: 1px solid transparentize($color: $primary-light, $amount: 0.3);
+      border: 2px solid transparentize($color: $primary-light, $amount: 0.3) !important;
       position: relative;
-      top: -0.5rem;
-      color: $text-dark;
+      background: transparent;
+      font-size: 0.9rem;
+      border-radius: 30px;
+      color: transparentize($color: $primary-light, $amount: 0.3) !important;
+      &:focus,
+      &:active {
+        background: transparent !important;
+        box-shadow: none !important;
+      }
     }
   }
 }
