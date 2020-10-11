@@ -18,7 +18,8 @@
     .avatar {
       display: block;
       margin: auto;
-      box-shadow: $shadow-sm-light;
+      box-shadow: $shadow-md;
+      border: 2px solid $primary-dark;
     }
     //name
     .name {
@@ -27,7 +28,7 @@
       line-height: 1.4rem;
       font-weight: 500;
       // color: $primary-color;
-      color: transparentize($color: $primary-light, $amount: 0.2);
+      color: transparentize($color: $primary-light, $amount: 0.3);
       letter-spacing: 1px;
     }
     //rpole
@@ -36,7 +37,7 @@
       display: block;
       font-size: 1.1rem;
       // color: $primary-dark;
-      color: transparentize($color: $text-dark, $amount: 0.5);
+      color: transparentize($color: $text-dark, $amount: 0.1);
       font-weight: 100;
     }
     //test

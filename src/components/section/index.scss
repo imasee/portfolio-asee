@@ -2,7 +2,7 @@
 
 .section {
   font-family: "Heebo", sans-serif;
-  padding: 56px 0rem !important;
+  padding: 86px 0rem !important;
   overflow: hidden;
   position: relative !important;
   &__header {
@@ -25,10 +25,10 @@
     &::after {
       content: "";
       display: block;
-      width: 0%;
+      width: 100%;
       // box-shadow: 0px 1px 5px rgba(168, 168, 168, 0.968);
       background: transparentize($color: $primary-light, $amount: 0.7);
-      // border: 2px solid transparentize($color: $primary-light, $amount: 0.8);
+      // border: 1px solid transparentize($color: $primary-color, $amount: 0.8);
       transition: width 0.5s ease-in-out;
       border-radius: 10px;
     }
