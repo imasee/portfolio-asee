@@ -24,9 +24,9 @@
       &::after {
         content: "";
         display: block;
-        border: 3px solid $text-white;
-        width: 70%;
-        height: 5px;
+        border: 1px solid $text-white !important;
+        width: 80%;
+        height: 2px;
         transform: scale(0);
         transition: transform 0.4s;
         transform-origin: left;
@@ -44,22 +44,24 @@
   &.solid {
     transition: background 0.4s ease, box-shadow 0.4s !important;
 
-    background: linear-gradient(to left, #dddddd 24.3%, #ffffff 79.07%) !important;
+    // background: linear-gradient(to left, #dddddd 24.3%, #ffffff 79.07%) !important;
+    background: linear-gradient(to right, #171c21 0%, #171e24 99.7%) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.651);
     //brand
     .navbar-brand {
-      color: rgb(55, 63, 65) !important;
+      color: rgb(255, 255, 255) !important;
     }
     .navbar-nav {
       .nav-link {
-        color: $primary-dark !important;
+        // color: $primary-dark !important;
+        color: white;
         &::after {
           border: 3px solid $primary-dark;
         }
       }
     }
     .navbar-toggler {
-      color: $primary-dark !important;
+      color: $text-white !important;
     }
   }
   //solid style
@@ -74,26 +76,13 @@
 
 @media only screen and (max-width: 768px) {
   //border-bottom
-  .border-bottom-xs {
-    border: 1px solid;
-    border-image-slice: 1;
-    border-width: 1px;
-    border-image-source: linear-gradient(
-      to right,
-      transparentize($color: $primary-light, $amount: 0.7) 0%,
-      transparent 70%
-    );
-    border-right: none;
-    border-left: none;
-    border-top: none;
-  }
 
   .navbar {
     &-nav {
       border-top: 1px solid transparentize($color: $text-light-dark, $amount: 0.8);
       .nav-link {
         &::after {
-          border: none;
+          display: none;
         }
       }
     }

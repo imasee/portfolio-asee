@@ -9,16 +9,21 @@ export default function () {
   return (
     <Section className="my_resume" headingFirst="My" headingSecond="Resume">
       <Row className="w-100 m-0">
-        <Col xs={12} className="px-0 mr-md-auto" md={6}>
-          <Educations />
-        </Col>
-      </Row>
-
-      <Row className="w-100 m-0">
-        <Col xs={12} className="px-0 ml-md-auto" md={6}>
+        <Col xs={12} className="px-0 mx-0 ml-md-auto" md={6}>
           <Experiences />
         </Col>
       </Row>
+      <Row className="w-100 m-0">
+        <Col xs={12} className="px-0 mx-0 ml-md-auto" md={6}>
+          <Educations />
+        </Col>
+      </Row>
+      <Row className="w-100 m-0">
+        {/* <Button>
+          Download Resume
+        </Button> */}
+      </Row>
+
     </Section>
   );
 }

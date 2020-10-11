@@ -8,6 +8,20 @@
   justify-content: center;
   align-items: center;
   font-family: "Barlow", sans-serif !important;
+  background: linear-gradient(to bottom, #0b1214 0%, #0b1416 99.7%);
+  text-align: left;
+  padding-left: 5rem;
+  &_vector {
+    position: absolute;
+    right: 0;
+    // background-size: contain;
+    // object-fit: fill;
+    // background-position: right;
+    // height: 100vh;
+    width: 100%;
+    // top: 50%;
+    transform: translateX(40%);
+  }
   //background
   &__bg {
     min-height: 600px;
@@ -24,31 +38,6 @@
     opacity: 0;
     animation: fadeIn 0.8s ease-in-out 0.1s 1 forwards !important;
     //
-  }
-
-  //bg div
-  &-skew {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0;
-    background: linear-gradient(90deg, #232c3b 0%, #1e2532 99.7%);
-    // transform: skewY(10deg) translateY(-50%);
-    // &::after {
-    //   content: "";
-    //   width: 100%;
-    //   height: 100%;
-    //   left: 0;
-    //   position: absolute;
-    //   background: inherit;
-    //   z-index: -1;
-    //   top: 10%;
-    //   bottom: 0;
-    //   transform-origin: left bottom;
-    //   transform: skewY(5deg);
-    // }
   }
 
   // name and intro
@@ -79,9 +68,9 @@
         opacity: 0;
         animation: fadeIn 0.7s ease-in 1.3s 1 forwards;
         //
-        font-size: 3.5rem;
+        font-size: 3rem;
         color: $text-white;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 4rem;
         letter-spacing: 2px;
       }
@@ -90,19 +79,22 @@
         opacity: 0;
         animation: fadeIn 0.7s ease 2s 1 forwards;
         //
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         font-weight: 300;
         display: block;
-        font-size: 1.2rem;
+        color: $text-dark;
+        font-size: 1.1rem;
         text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.397);
       }
 
       //button
-      &-btn {
+      .btn {
         // TODO:REMOVE - use react-reveal intsead
         opacity: 0;
         animation: fadeIn 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3.5s 1 forwards;
         //
+        border: 2px solid $primary-light !important;
+        border-radius: 30px;
         overflow: hidden;
         text-shadow: none;
         position: relative;
@@ -110,10 +102,9 @@
         justify-content: center;
         align-items: center;
         box-shadow: $shadow-sm;
-        transition: box-shadow 0.7s;
         z-index: 2;
-        // background: linear-gradient(90deg, #ABBAB8 0%, #FFFFFF 100%);
-        color: $primary-dark;
+        background: linear-gradient(90deg, #051317 0%, #0b1416 99.7%) !important;
+        color: $primary-light !important;
         &::after {
           position: absolute;
           top: -100%;
@@ -123,49 +114,24 @@
           left: 0%;
           content: "";
           z-index: -1;
-          background: $primary-light;
+          background: linear-gradient(90deg, #030b0e 0%, #0c1618 99.7%);
         }
         &:hover {
-          box-shadow: $shadow-md;
           position: relative;
           z-index: 1;
+          color: $text-white !important;
           &::after {
             top: 0%;
           }
           .download {
             color: $text-white;
           }
-          .btn {
-            color: $text-white !important;
-          }
         }
         .download {
-          color: $primary-dark;
+          color: $primary-light;
           z-index: 3;
           position: relative;
           transition: color 0.4s;
-        }
-
-        &:active,
-        &:focus {
-          background: rgba($color: $text-white, $alpha: 0.9);
-        }
-        .btn {
-          transition: color 0.4s;
-          position: relative;
-          z-index: 3;
-          padding: 0.5rem 1rem !important;
-          letter-spacing: 1px;
-          font-weight: 400;
-          background: transparent;
-          outline: none;
-          border: none;
-          color: $primary-dark !important;
-          &:active,
-          &:focus {
-            background: transparent;
-            // background: rgba($color: $text-light, $alpha: .8)
-          }
         }
       }
     }
@@ -184,10 +150,7 @@
 
 @media only screen and (max-width: 768px) {
   .landing {
-    &-skew {
-      // transform: skewY(14deg) translateY(-48%);
-      // height: 90%;
-    }
+    padding-left: 0rem;
     .name__intro {
       &_info {
         display: flex;

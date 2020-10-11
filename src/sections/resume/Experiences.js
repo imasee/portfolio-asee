@@ -16,8 +16,10 @@ const educations = [
 
 export default function () {
   return (
-    <Container className="p-0 my_resume_experiences my-3 pt-1">
-      <div className="my_resume_heading text-left">Experience</div>
+    <Container className="p-0 my_resume_experiences my-0 pt-1" fluid>
+      {/* <div className="my_resume_heading text-left mb-3">
+        <span className="d-inline-block mx-0 mx-md-3">Experiences</span>
+      </div> */}
       {
         educations.map(
           e => {
@@ -27,7 +29,10 @@ export default function () {
               role={e.role}
               dateTo={e.dateTo}
               datefrom={e.dateFrom}
-            />
+              icon="fa-briefcase"
+            >
+
+            </TimelineItem>
           }
         )
       }

@@ -1,27 +1,55 @@
-$primary-color: #2b5162;
-$secondary-color:rgb(255, 255, 255);
-$default-color:rgb(190, 190, 190);
+$primary-color: #17b794;
+$secondary-color: rgb(255, 255, 255);
+$default-color: #f6c90e;
+$default-light: #cf7500;
 $dark: rgb(8, 8, 8);
-$primary-dark:#232C3B;
-$primary-light:#546B86;
-$primary-lighter:#546b86b0;
+$primary-dark: #16423e;
+$primary-light: #17b794;
+$primary-lighter: #00fff5;
+$secondary-color: #0c2233;
+$secondary-light: #5c5470;
+$secondary-dark: #2a2438;
+$slate: #161b21;
 
 //text colors
 
-$text-white:white;
-$text-light:rgb(192, 192, 192);
-$text-dark:rgb(37, 37, 37);
+$text-white: #dbe3e5;
+$text-light: rgb(192, 192, 192);
+$text-dark: #688c9b;
 $text-light-dark: rgb(71, 71, 71);
 
-
 //text-shadow
-$text-shadow: 0px 0px 20px transparentize($color: $text-light-dark, $amount: .5) ;
+$text-shadow: 0px 0px 20px
+    transparentize(
+        $color: $text-light-dark,
+        $amount: 0.5,
+    );
 
 //shadow
-$shadow-sm: 0px 0px 5px transparentize($color: $dark, $amount: .2);
-$shadow-md: 0px 0px 20px transparentize($color: $dark, $amount: .2);
-$shadow-lg: 0px 0px 35px transparentize($color: $dark, $amount: .2);
+$shadow-sm: 0px 0px 5px
+    transparentize(
+        $color: $dark,
+        $amount: 0.2,
+    );
+$shadow-md: 0px 0px 20px
+    transparentize(
+        $color: $dark,
+        $amount: 0.2,
+    );
+$shadow-lg: 0px 0px 35px
+    transparentize(
+        $color: $dark,
+        $amount: 0.2,
+    );
 
 $shadow-sm-light: 0px 5px 16px rgba(24, 24, 24, 0.4);
-$shadow-md-light: 0px 0px 20px transparentize($color: $dark, $amount: .2);
-$shadow-lg-light: 0px 0px 35px transparentize($color: $dark, $amount: .2);
+$shadow-md-light: 0px 0px 20px
+    transparentize(
+        $color: $dark,
+        $amount: 0.2,
+    );
+$shadow-lg-light: 0px 0px 35px
+    transparentize(
+        $color: $dark,
+        $amount: 0.2,
+    );

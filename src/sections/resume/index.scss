@@ -2,17 +2,18 @@
 
 .my_resume {
   &__header {
-    font-family: "Inter", sans-serif;
-    padding-left: 7rem !important;
+    padding-left: 0rem !important;
   }
   &_heading {
-    font-size: 1.1rem;
+    font-size: 0.7rem;
     font-weight: 500;
-    color: $primary-dark;
+    color: transparentize($color: $primary-dark, $amount: 0.5);
   }
   &__content {
     padding: 0px 7rem !important;
-    .my_resume_educations {
+    .my_resume_educations,
+    .my_resume_experiences {
+      margin-left: -2.4rem;
     }
   }
 }
@@ -25,7 +26,9 @@
     }
     &__content {
       padding: 0px 2rem !important;
-      .my_resume_educations {
+      .my_resume_educations,
+      .my_resume_experiences {
+        margin-left: 0rem;
         &_heading {
         }
       }

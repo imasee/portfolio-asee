@@ -67,27 +67,23 @@ export default function () {
           <NavLink
             link="About"
             icon="fa-user"
-            className="border-bottom-xs my-2 my-md-0"
+            className="my-2 my-md-0"
           />
           <NavLink
             link="Skills"
             icon="fa-cogs"
-            className="border-bottom-xs my-2 my-md-0"
+            className="my-2 my-md-0"
           />
-          <NavLink
-            link="Education"
-            icon="fa-university"
-            className="border-bottom-xs my-2 my-md-0"
-          />
+
           <NavLink
             link="Resume"
             icon="fa-file"
-            className="border-bottom-xs my-2 my-md-0"
+            className="my-2 my-md-0"
           />
           <NavLink
             link="Project"
             icon="fa-project-diagram"
-            className="border-bottom-xs my-2 my-md-0"
+            className="my-2 my-md-0"
           />
           <NavLink
             link="Contact"
