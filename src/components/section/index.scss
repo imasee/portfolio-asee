@@ -9,26 +9,26 @@
     font-size: 1.9rem;
     letter-spacing: 2px;
     display: inline-block;
-    color: $primary-dark;
     text-transform: capitalize;
     margin-bottom: 4rem !important;
     // text-shadow: 0px 5px 10px rgba(104, 104, 104, 0.568);
     span:nth-child(1) {
       font-weight: lighter;
       display: inline-block;
-      color: $primary-light;
+      // color: $primary-light;
+      color: $text-white;
     }
     span:nth-child(2) {
       font-weight: bolder;
-      color: $primary-dark;
+      color: $primary-light;
     }
     &::after {
       content: "";
       display: block;
-      width: 60%;
+      width: 0%;
       // box-shadow: 0px 1px 5px rgba(168, 168, 168, 0.968);
       background: transparentize($color: $primary-light, $amount: 0.7);
-      border: 2px solid transparentize($color: $primary-light, $amount: 0.8);
+      // border: 2px solid transparentize($color: $primary-light, $amount: 0.8);
       transition: width 0.5s ease-in-out;
       border-radius: 10px;
     }

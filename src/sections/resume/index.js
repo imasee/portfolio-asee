@@ -18,7 +18,11 @@ export default function () {
           <Educations />
         </Col>
       </Row>
-
+      <Row className="w-100 m-0">
+        {/* <Button>
+          Download Resume
+        </Button> */}
+      </Row>
 
     </Section>
   );

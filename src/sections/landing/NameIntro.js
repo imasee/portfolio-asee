@@ -1,7 +1,7 @@
 import React from "react";
-import "./index.scss";
+import { Button, Container } from "react-bootstrap";
 import Icon from "../../components/Icon";
-import { Container, Badge, Button } from "react-bootstrap";
+import "./index.scss";
 
 export default function () {
   return (
@@ -15,16 +15,16 @@ export default function () {
         <span className="name__intro_info-designation mb-3">
           i develop web applications
         </span>
-        <Badge pill variant="light" className="name__intro_info-btn mt-3">
+        <Button type="button" variant="default" className="btn">
+          <span className="d-inline-block mr-2">Download Resume</span>
           <Icon
-            className="pl-2 download"
+            className="pr-2 download"
             icon="fa-file-download"
-            fontSize="1.3rem"
+            fontSize=".9rem"
           />
-          <Button type="button" className="btn">
-            Download Resume
-          </Button>
-        </Badge>
+        </Button>
+
+
       </div>
     </Container>
   );

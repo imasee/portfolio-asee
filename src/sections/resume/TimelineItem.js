@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Timeline, TimelineEvent } from "react-event-timeline";
 import Icon from "../../components/Icon";
-import { COLOR_PRIMARY, COLOR_PRIMARY_LIGHTER } from '../../utils/const';
-import { EdDuration, EdSubheading, EdTitle, ButtonMore } from './time-line-components';
+import { COLOR_PRIMARY_LIGHTER } from '../../utils/const';
+import { ButtonMore, EdDuration, EdSubheading, EdTitle } from './time-line-components';
 import "./timeline-item.scss";
-import ToolTip from '../../components/Tooltip';
 
 const lineStyles = {
   width: "1px",
@@ -15,15 +14,15 @@ const lineStyles = {
 }
 
 const iconStyle = {
-  color: COLOR_PRIMARY,
+  color: "#17b794",
 }
 const bubbleStyle = {
   padding: "1rem",
   border: `1px solid ${COLOR_PRIMARY_LIGHTER}`,
   display: "flex",
-
+  background: "rgb(27,34,41)",
   justifyContent: "center",
-  boxShadow: "0px 1px 16px rgba(200,200,200,.6)"
+  boxShadow: "0px 1px 16px rgba(11,19,21,.6)"
 }
 
 export default function ({ children, institution, location, role, roleSub, icon = "fa-university", type, datefrom, dateTo, className, logo }) {
@@ -59,6 +58,10 @@ export default function ({ children, institution, location, role, roleSub, icon 
             text={isShowDetails ? <Icon icon="fa-ellipsis-v" fontSize=".8rem" /> : <Icon icon="fa-ellipsis-h" fontSize=".8rem" />}
             handleClick={handleToggleShowDetails}
           />}
+          contentStyle={{
+            background: "#1f262d",
+            width: "100%"
+          }}
         >
           {isShowDetails && children}
         </TimelineEvent>

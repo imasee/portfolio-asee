@@ -1,46 +1,30 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-
-.skill_progress{
+.skill_progress {
   padding: 0;
-  &_info{
+  &_info {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    font-size: .9rem;
-    color: $primary-light;
-    margin-bottom: .5rem;
-    &_label{
-      
+    font-size: 0.9rem;
+    color: $text-white;
+    margin-bottom: 0.5rem;
+    &_label {
     }
-    &_value{
-      
+    &_value {
     }
   }
-  &_bar{
-   height: 5px;
-   position: relative;
-   z-index: 7;
-   overflow: visible;
-   .progress-bar{
-      background: #F1C048;
+  &_bar {
+    height: 5px;
+    position: relative;
+    z-index: 7;
+    overflow: visible;
+    .progress-bar {
+      background: $default-light;
       position: relative;
       z-index: 8;
       overflow: visible;
       border-radius: 10px !important;
-      &::after{
-        z-index: 10;
-        content: "";
-        position: relative;
-        display: block;
-        right: 0;
-        margin-left: auto; 
-        width:10px;
-        height: 10px;
-        background: #F1C048;
-        border-radius: 50%;
-       border: 2px solid  #F1C048;
-      }
-   }
+    }
   }
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import ToolTip from '../../components/Tooltip';
-import Icon from '../../components/Icon';
 
 
 export const EdDuration = React.memo(({ from, to }) => (
@@ -14,7 +13,7 @@ export const EdDuration = React.memo(({ from, to }) => (
 export const EdTitle = React.memo(({ institution, location, src }) => (
     <div className="ed_title d-flex">
         <div className="ed_title_logo">
-            {src && <img className="ed_title_logo_img mr-1" src={src} height="40px" width="40px" />}
+            {src && <img className="ed_title_logo_img mr-1" alt={`logo`} src={src} height="40px" width="40px" />}
         </div>
         <div className="ed_title_content">
             <span className="ed_title_content_institution">{institution}</span>

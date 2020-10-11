@@ -1,8 +1,7 @@
-import React, { memo } from "react";
 import Tooltip from "rc-tooltip";
 import "rc-tooltip/assets/bootstrap_white.css";
+import React from "react";
 
-const renderTooltip = (text) => <span>{text}</span>;
 
 export default function ({ children, title }) {
   return (

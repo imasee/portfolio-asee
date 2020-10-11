@@ -12,6 +12,8 @@ import Skills from "./sections/skills";
 import Resume from "./sections/resume";
 //navbar
 import Appbar from "./components/appbar";
+//footer
+import Footer from './components/footer'
 
 export default function App() {
   return (
@@ -21,6 +23,7 @@ export default function App() {
       <Summary />
       <Skills />
       <Resume />
+      <Footer />
     </div>
   );
 }

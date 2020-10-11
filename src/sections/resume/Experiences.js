@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import TimelineItem from "./TimelineItem";
-import Icon from '../../components/Icon';
 
 
 const educations = [

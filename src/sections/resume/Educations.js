@@ -1,8 +1,6 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, ListGroup } from "react-bootstrap";
 import TimelineItem from "./TimelineItem";
-import Icon from '../../components/Icon';
-import { ListGroup } from 'react-bootstrap';
 
 
 const educations = [
@@ -58,7 +56,7 @@ export default function () {
               logo={e.logo}
             >
               {e.descriptions.length > 0 &&
-                <ListGroup variant="flush" className="m-0 p-0 border-top">
+                <ListGroup variant="flush" className="m-0 p-0 text-light">
                   {e.descriptions.map((d, j) => (<ListGroup.Item key={j}>{d}</ListGroup.Item>))}
                 </ListGroup>}
             </TimelineItem>
