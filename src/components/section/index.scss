@@ -35,13 +35,13 @@
   }
   &__content {
   }
-  &:hover {
-    .section__header {
-      &::after {
-        width: 100%;
-      }
-    }
-  }
+  // &:hover {
+  //   .section__header {
+  //     &::after {
+  //       width: 100%;
+  //     }
+  //   }
+  // }
 }
 
 @media only screen and (max-width: 768px) {

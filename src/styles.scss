@@ -1,16 +1,15 @@
-@import './styles/variables';
+@import "./styles/variables";
 
 //font - barlow
 // @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   // font-family: "Barlow", sans-serif !important;
   width: 100vw;
   overflow: hidden;
@@ -22,27 +21,35 @@ body{
   text-align: center;
 }
 
-
-.hover{
-  &:hover{
+.hover {
+  &:hover {
     box-shadow: $shadow-md;
   }
 }
 
-
-.skewed-right-bottom{
+.skewed-right-bottom {
   position: absolute;
   left: 0px;
-  width: 100vw ;
+  width: 100vw;
   height: auto;
   bottom: -56px;
   object-fit: fill;
 }
 
-.skewed-left-top{
-  position: absolute ;
+.skewed-left-top {
+  position: absolute;
   left: 0px;
-  width: 100vw ;
+  width: 100vw;
   height: auto;
-  top: -126px ;
+  top: -126px;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
 }
