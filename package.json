@@ -28,12 +28,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "build:lambda": "netlify-lambda build src/lambda",
     "start:lambda": "netlify-lambda serve src/lambda",
-    "postinstall": "netlify-lambda install"
+    "build:app": "react-scripts build",
+    "build:lambda": "netlify-lambda build src/lambda",
+    "build": "run-p build:**",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "browserslist": [
     ">0.2%",
