@@ -54,6 +54,8 @@ export default function () {
               key={i}
               icon="fa-graduation-cap"
               logo={e.logo}
+              delay={(i + 2) * 300}
+
             >
               {e.descriptions.length > 0 &&
                 <ListGroup variant="flush" className="m-0 p-0 text-light">
