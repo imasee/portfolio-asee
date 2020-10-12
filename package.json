@@ -32,7 +32,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build:lambda": "netlify-lambda build src/lambda",
-    "start:lambda": "netlify-lambda serve src/lambda"
+    "start:lambda": "netlify-lambda serve src/lambda",
+    "postinstall": "netlify-lambda install"
   },
   "browserslist": [
     ">0.2%",
