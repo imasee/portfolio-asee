@@ -1,8 +1,9 @@
 import React from "react";
-import "./index.scss";
-import NameIntro from "./NameIntro";
 import { Container } from "react-bootstrap";
 import LandingBg from '../../components/backgrounds/LandingBg';
+import "./index.scss";
+import NameIntro from "./NameIntro";
+
 
 export default function () {
   return (

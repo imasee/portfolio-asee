@@ -2,6 +2,7 @@
 
 .my-skills {
   display: flex;
+  background: #0e161b;
   flex-direction: column;
   // justify-content: center;
   align-items: flex-start;
@@ -103,6 +104,7 @@
   .my-skills {
     align-items: center;
     &__header {
+      display: flex;
     }
     &__content {
       padding-left: 2rem !important;

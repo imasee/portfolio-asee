@@ -4,6 +4,7 @@ import "./index.scss";
 import Icon from "../Icon";
 import throttle from "lodash.throttle";
 import NavLink from "./NavLink";
+import Logo from './Logo';
 
 export default function () {
   const [expanded, setExpanded] = useState(false);
@@ -57,7 +58,9 @@ export default function () {
         }
       }}
     >
-      <Navbar.Brand href="#home">MA</Navbar.Brand>
+      <Navbar.Brand href="#home">
+        <Logo height="1.8rem" width="1.8rem" style={{ filter: "drop-shadow(2px 0mm 4mm rgba(0, 0, 0,.3))" }} />
+      </Navbar.Brand>
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
         children={<Icon icon="fa-align-right" className="navbar-menu-icon" />}

@@ -5,3 +5,8 @@ export const COLOR_DARK = "rgb(8, 8, 8)";
 export const COLOR_PRIMARY_DARK = "#232C3B";
 export const COLOR_PRIMARY_LIGHT = "#546B86";
 export const COLOR_PRIMARY_LIGHTER = "#546b86b0";
+
+
+//window size
+//mobile
+export const MOBILE_MODE = 768;

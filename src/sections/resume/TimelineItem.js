@@ -5,12 +5,15 @@ import Icon from "../../components/Icon";
 import { COLOR_PRIMARY_LIGHTER } from '../../utils/const';
 import { ButtonMore, EdDuration, EdSubheading, EdTitle } from './time-line-components';
 import "./timeline-item.scss";
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
+import { useMediaQuery } from 'react-responsive';
+import { MOBILE_MODE } from '../../utils/const';
 
 const lineStyles = {
   width: "1px",
   background: COLOR_PRIMARY_LIGHTER,
   opacity: ".6",
-  boxShadow: "0px 1px 16px rgba(0,0,0,.9)"
 }
 
 const iconStyle = {
@@ -25,46 +28,52 @@ const bubbleStyle = {
   boxShadow: "0px 1px 16px rgba(11,19,21,.6)"
 }
 
-export default function ({ children, institution, location, role, roleSub, icon = "fa-university", type, datefrom, dateTo, className, logo }) {
+export default function ({ children, institution, location, role, roleSub, icon = "fa-university", type, datefrom, dateTo, className, logo, delay = 1000 }) {
 
   const [isShowDetails, setShowDetails] = useState(false);
-
+  const isMobileMode = useMediaQuery({ maxWidth: MOBILE_MODE });
+  console.log(isMobileMode);
   function handleToggleShowDetails() {
     setShowDetails(prev => (!prev))
   }
 
+  let revealDirection = className === "left" && !isMobileMode ? { left: true } : { right: true };
   return (
     <Container className="timeline_item" fluid>
       <Timeline lineStyle={lineStyles}>
-        <TimelineEvent
-          iconStyle={iconStyle}
-          bubbleStyle={bubbleStyle}
-          className={["timeline_item_content card rounded shadow ", children && "pb-5", className === "left" ? "left" : ""].join(" ")}
-          title={<EdTitle
-            institution={institution}
-            location={location} />}
-          subtitle={<EdSubheading
-            main={role}
-            sec={roleSub} />}
-          createdAt={<EdDuration
-            to={dateTo} from={datefrom} />}
-          icon={
-            <Icon
-              icon={icon}
-              fontSize=".8rem" />}
-          buttons={children && <ButtonMore
-            className="btn-circle shadow-sm"
-            title={isShowDetails ? "Hide Description" : "Show Description"}
-            text={isShowDetails ? <Icon icon="fa-ellipsis-v" fontSize=".8rem" /> : <Icon icon="fa-ellipsis-h" fontSize=".8rem" />}
-            handleClick={handleToggleShowDetails}
-          />}
-          contentStyle={{
-            background: "#1f262d",
-            width: "100%"
-          }}
-        >
-          {isShowDetails && children}
-        </TimelineEvent>
+        <Fade {...revealDirection} distance=".8em" delay={delay}>
+          <TimelineEvent
+            iconStyle={iconStyle}
+            bubbleStyle={bubbleStyle}
+            className={["timeline_item_content card rounded shadow ", children && "pb-5", className === "left" ? "left" : ""].join(" ")}
+            title={<EdTitle
+              institution={institution}
+              location={location} />}
+            subtitle={<EdSubheading
+              main={role}
+              sec={roleSub} />}
+            createdAt={<EdDuration
+              to={dateTo} from={datefrom} />}
+            icon={
+              <Icon
+                icon={icon}
+                fontSize=".8rem" />}
+            buttons={children && <ButtonMore
+              className="btn-circle shadow-sm"
+              title={isShowDetails ? "Hide Description" : "Show Description"}
+              text={isShowDetails ? <Icon icon="fa-ellipsis-v" fontSize=".8rem" /> : <Icon icon="fa-ellipsis-h" fontSize=".8rem" />}
+              handleClick={handleToggleShowDetails}
+            />}
+            contentStyle={{
+              background: "#1f262d",
+              width: "100%"
+            }}
+          >
+            <Zoom when={isShowDetails} timeout={400} collapse>
+              {children}
+            </Zoom>
+          </TimelineEvent>
+        </Fade>
       </Timeline>
     </Container >
   );
