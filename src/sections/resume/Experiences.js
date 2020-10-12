@@ -22,7 +22,7 @@ export default function () {
       </div> */}
       {
         educations.map(
-          e => {
+          (e, i) => {
             return <TimelineItem
               institution={e.company}
               location={e.location}
@@ -30,6 +30,7 @@ export default function () {
               dateTo={e.dateTo}
               datefrom={e.dateFrom}
               icon="fa-briefcase"
+              key={i}
             >
 
             </TimelineItem>
