@@ -6,11 +6,16 @@
   //brand
   &-brand {
     color: $text-white !important;
+    svg {
+      fill: transparent !important;
+      stroke: $primary-light;
+      stroke-width: 1px;
+    }
   }
 
   //menu icon
   .navbar-toggler {
-    color: $text-white !important;
+    color: $primary-light !important;
     border: 0;
     &:hover {
       opacity: 0.8;
@@ -20,6 +25,9 @@
   //nav
   &-nav {
     .nav-link {
+      &-icon {
+        width: 1.8rem;
+      }
       color: $text-white !important;
       &::after {
         content: "";
@@ -61,7 +69,7 @@
       }
     }
     .navbar-toggler {
-      color: $text-white !important;
+      color: $primary-color !important;
     }
   }
   //solid style
