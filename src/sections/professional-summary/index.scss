@@ -20,6 +20,7 @@
       margin: auto;
       box-shadow: 2px 0px 10px rgba(2, 4, 4, 0.68);
       border: 2px solid $primary-dark;
+      padding: 2px;
     }
     //name
     .name {
@@ -31,7 +32,7 @@
       color: transparentize($color: $primary-light, $amount: 0.3);
       letter-spacing: 1px;
     }
-    //rpole
+    //role
     .role {
       margin: auto;
       display: block;
@@ -40,36 +41,69 @@
       color: transparentize($color: $text-dark, $amount: 0.1);
       font-weight: 100;
     }
-    //test
-    // TODO:Remove later
-    .test {
-      max-width: 400px;
-      border-radius: 10px;
-      filter: brightness(70%) contrast(190%) hue-rotate(60deg) sepia(15%) invert(300%);
+
+    //sumary showcase
+    .summary_showcase {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      &:hover {
+        cursor: pointer;
+        .summary_showcase_item {
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      &_item {
+        transition: transform 0.8s ease-in !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0.8rem;
+        background: $slate;
+        max-width: 130px;
+        margin: 1rem 0.2rem;
+        border-radius: 1px;
+        display: inline-block !important;
+        &_icon i {
+          font-size: 1.2rem !important;
+        }
+
+        &_title {
+          margin: 0;
+          color: $text-light;
+          font-weight: 100;
+          font-size: 0.8rem;
+        }
+      }
+      &_item:nth-child(1) {
+        .summary_showcase_item_icon {
+          color: $primary-lighter;
+        }
+      }
+      &_item:nth-child(2) {
+        .summary_showcase_item_icon {
+          color: $default-color;
+        }
+      }
+      &_item:nth-child(3) {
+        .summary_showcase_item_icon {
+          color: $secondary-light;
+        }
+      }
     }
 
     //summary
-    p {
-      padding-left: 5rem;
-      padding-right: 5rem;
-      text-align: center;
-      margin-top: 1rem;
-      font-weight: 300;
-      position: relative;
-      height: calc(1.5rem * 5);
+    .summary {
+      font-weight: 200;
       color: $text-white;
       letter-spacing: 1px;
       line-height: 1.5rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: pre-wrap;
-      //more button
-      &.more {
-        height: auto !important;
-        -webkit-line-clamp: initial;
+      br {
+        display: none;
       }
     }
 
@@ -80,6 +114,7 @@
       background: transparent;
       font-size: 0.9rem;
       border-radius: 30px;
+      margin-top: 1rem !important;
       color: transparentize($color: $primary-light, $amount: 0.3) !important;
       &:focus,
       &:active {

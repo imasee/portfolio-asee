@@ -32,7 +32,7 @@ export default function ({ children, institution, location, role, roleSub, icon 
 
   const [isShowDetails, setShowDetails] = useState(false);
   const isMobileMode = useMediaQuery({ maxWidth: MOBILE_MODE });
-  console.log(isMobileMode);
+
   function handleToggleShowDetails() {
     setShowDetails(prev => (!prev))
   }

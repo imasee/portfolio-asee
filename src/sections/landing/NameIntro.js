@@ -11,7 +11,7 @@ export default function () {
         <span className="name__intro_info-greeting">i'm</span>
         <span className="name__intro_info-name text-right text-uppercase">
           <Fade delay={500} duration={2000}>
-            <span className="d-block d-sm-inline-block">mohammed</span>
+            <span className="d-block d-sm-inline-block mr-0 mr-md-2">mohammed</span>
             <span className="d-block d-sm-inline-block">asif</span>
           </Fade>
         </span>
