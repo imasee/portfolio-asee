@@ -130,9 +130,29 @@
     &__content {
       padding-left: 2rem !important;
       padding-right: 2rem !important;
-      p {
-        padding-left: 0rem;
-        padding-right: 0rem;
+      .summary {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+      }
+
+      .summary_showcase {
+        &:hover {
+          .summary_showcase_item {
+            &:hover {
+              transform: scale(1);
+            }
+          }
+        }
+        &_item {
+          &_icon i {
+            font-size: 1rem !important;
+          }
+
+          &_title {
+            font-weight: 100;
+            font-size: 0.6rem;
+          }
+        }
       }
     }
   }

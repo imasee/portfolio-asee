@@ -5,8 +5,9 @@ import Truncate from 'react-truncate';
 import Section from "../../components/section";
 import "./index.scss";
 import SummaryShowcaseItem from './SummaryShowcaseItem';
+import withScrollElement from '../../hoc/withScrollElement';
 
-export default memo(function () {
+export default withScrollElement(memo(function () {
   const [state, setState] = useState({
     showMore: false
   });
@@ -70,4 +71,4 @@ export default memo(function () {
       </div>
     </Section>
   );
-});
+}));

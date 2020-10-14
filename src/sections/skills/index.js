@@ -6,8 +6,10 @@ import Section from "../../components/section";
 import AllSkills from "./AllSkills";
 import "./index.scss";
 import TopSkills from "./TopSkills";
+import withScrollElement from '../../hoc/withScrollElement';
 
-export default memo(function () {
+
+export default withScrollElement(memo(function () {
   return (
     <Section className="my-skills" headingFirst="My" headingSecond="Skills">
       {/* <SkewLeftBackground
@@ -34,4 +36,4 @@ export default memo(function () {
       </Fade>
     </Section >
   );
-});
+}));

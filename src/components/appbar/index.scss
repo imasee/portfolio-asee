@@ -25,6 +25,7 @@
   //nav
   &-nav {
     .nav-link {
+      cursor: pointer;
       &-icon {
         width: 1.8rem;
       }
@@ -39,6 +40,12 @@
         transition: transform 0.4s;
         transform-origin: left;
         border-radius: 3rem;
+      }
+      &.active {
+        &::after {
+          transform: scale(1);
+          border: 2px solid $primary-color !important;
+        }
       }
       &:hover {
         &::after {

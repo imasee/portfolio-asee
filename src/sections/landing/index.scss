@@ -47,7 +47,6 @@
     &_info {
       color: $text-light;
       text-shadow: $shadow-sm;
-      text-transform: capitalize;
       font-weight: 900;
 
       &-greeting {
@@ -64,11 +63,11 @@
         letter-spacing: 1px;
       }
       &-designation {
-        // letter-spacing: 1px;
+        letter-spacing: 1px;
         font-weight: 300;
         display: block;
         color: $text-dark;
-        text-transform: capitalize !important;
+        text-transform: unset !important;
         font-size: 1rem;
         text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.397);
       }

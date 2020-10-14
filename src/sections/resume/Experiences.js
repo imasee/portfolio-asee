@@ -31,7 +31,7 @@ export default function () {
               datefrom={e.dateFrom}
               icon="fa-briefcase"
               key={i}
-              delay={(i + 1) * 200}
+              delay={(i + 1) * 300}
             >
 
             </TimelineItem>

@@ -54,7 +54,7 @@ export default function () {
               key={i}
               icon="fa-graduation-cap"
               logo={e.logo}
-              delay={(i + 2) * 300}
+              delay={(i + 1.5) * 300}
 
             >
               {e.descriptions.length > 0 &&

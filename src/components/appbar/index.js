@@ -6,6 +6,13 @@ import throttle from "lodash.throttle";
 import NavLink from "./NavLink";
 import Logo from './Logo';
 
+const scrollLinkProps = {
+  spy: true,
+  smooth: true,
+  offset: -60,
+  duration: 500
+}
+
 export default function () {
   const [expanded, setExpanded] = useState(false);
   const [navBackground, setNavBackground] = useState("transparent");
@@ -68,30 +75,47 @@ export default function () {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-md-auto text-left mt-3 mt-md-0">
           <NavLink
+            to="home"
+            link="Home"
+            icon="fa-home"
+            className="my-2 my-md-0"
+            {...scrollLinkProps}
+          />
+          <NavLink
+            to="about"
             link="About"
             icon="fa-user"
             className="my-2 my-md-0"
+            {...scrollLinkProps}
           />
           <NavLink
+            to="skills"
             link="Skills"
             icon="fa-cogs"
             className="my-2 my-md-0"
+            {...scrollLinkProps}
           />
 
           <NavLink
+            to="resume"
             link="Resume"
             icon="fa-file"
             className="my-2 my-md-0"
+            {...scrollLinkProps}
           />
           <NavLink
-            link="Project"
+            to="projects"
+            link="Projects"
             icon="fa-project-diagram"
             className="my-2 my-md-0"
+            {...scrollLinkProps}
           />
           <NavLink
+            to="contact"
             link="Contact"
             icon="fa-address-card"
             className="my-2 my-md-0"
+            {...scrollLinkProps}
           />
         </Nav>
       </Navbar.Collapse>
