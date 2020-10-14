@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, ListGroup } from "react-bootstrap";
-import TimelineItem from "./TimelineItem";
+import { Container } from "react-bootstrap";
 import { userResumeFallback } from '../../utils/fallbackData';
+import TimelineItem from "./TimelineItem";
 
 
 export default function ({ data = [] }) {
