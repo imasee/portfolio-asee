@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Timeline, TimelineEvent } from "react-event-timeline";
+import { useMediaQuery } from 'react-responsive';
+import Zoom from 'react-reveal/Zoom';
 import Icon from "../../components/Icon";
-import { COLOR_PRIMARY_LIGHTER } from '../../utils/const';
+import { MemoFade as Fade } from '../../components/reveal-memoized';
+import { COLOR_PRIMARY_LIGHTER, MOBILE_MODE } from '../../utils/const';
 import { ButtonMore, EdDuration, EdSubheading, EdTitle } from './time-line-components';
 import "./timeline-item.scss";
-import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
-import { useMediaQuery } from 'react-responsive';
-import { MOBILE_MODE } from '../../utils/const';
 
 const lineStyles = {
   width: "1px",
@@ -29,7 +28,6 @@ const bubbleStyle = {
 }
 
 export default function ({ children, institution, location, role, roleSub, icon = "fa-university", type, datefrom, dateTo, className, logo, delay = 1000 }) {
-
   const [isShowDetails, setShowDetails] = useState(false);
   const isMobileMode = useMediaQuery({ maxWidth: MOBILE_MODE });
 
@@ -41,7 +39,7 @@ export default function ({ children, institution, location, role, roleSub, icon 
   return (
     <Container className="timeline_item" fluid>
       <Timeline lineStyle={lineStyles}>
-        <Fade {...revealDirection} distance=".8em" delay={delay}>
+        <Fade {...revealDirection} distance="1.5rem" delay={delay}>
           <TimelineEvent
             iconStyle={iconStyle}
             bubbleStyle={bubbleStyle}
@@ -70,6 +68,7 @@ export default function ({ children, institution, location, role, roleSub, icon 
             }}
           >
             <Zoom when={isShowDetails} timeout={400} collapse>
+
               {children}
             </Zoom>
           </TimelineEvent>

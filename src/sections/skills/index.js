@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { Col, Row } from "react-bootstrap";
-import Fade from 'react-reveal/Fade';
+import { MemoFade as Fade } from '../../components/reveal-memoized';
 import Section from "../../components/section";
 // import SkewLeftBackground from "../../components/backgrounds/SkewLeftBackGround";
 import AllSkills from "./AllSkills";
@@ -9,7 +9,8 @@ import TopSkills from "./TopSkills";
 import withScrollElement from '../../hoc/withScrollElement';
 
 
-export default withScrollElement(memo(function () {
+export default withScrollElement(memo(function ({ allSkills, topSkills, summary }) {
+
   return (
     <Section className="my-skills" headingFirst="My" headingSecond="Skills">
       {/* <SkewLeftBackground
@@ -21,15 +22,13 @@ export default withScrollElement(memo(function () {
           <Row className="w-100 mx-0 d-flex flex-column flex-md-row">
             <Col sm={12} md className="px-0">
               <p className="my-skills-text text-center text-md-left pl-0 pr-0 pr-md-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et dui
-                ullamcorper, hendrerit dui ut, tristique urna. Sed ultricies ornare
-                est at pulvinar..
-        </p>
+                {summary}
+              </p>
 
-              <AllSkills />
+              <AllSkills data={allSkills} />
             </Col>
             <Col sm={12} md className="px-0">
-              <TopSkills />
+              <TopSkills data={topSkills} />
             </Col>
           </Row>
         </div>

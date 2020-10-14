@@ -15,6 +15,16 @@
     .my_resume_experiences {
       margin-left: -2.4rem;
     }
+
+    .timeline_detail_list {
+      color: $text-white !important;
+      list-style: none;
+      overflow: hidden;
+      overflow-y: auto;
+      &_item {
+        padding: 0.5rem 1rem;
+      }
+    }
   }
 }
 

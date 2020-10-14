@@ -18,7 +18,7 @@ import Appbar from "../components/appbar";
 //footer
 import Footer from '../components/footer';
 
-export default function (props) {
+export default function ({ infoData, resumeData }) {
 
     useEffect(() => {
         Events.scrollEvent.register("begin", function (to, element) {
@@ -39,10 +39,21 @@ export default function (props) {
     return (
         <Container className="home_container p-0" fluid>
             <Appbar />
-            <Landing name="home" />
-            <Summary name="about" />
-            <Skills name="skills" />
-            <Resume name="resume" />
+            <Landing name="home"
+                firstName={infoData.firstName}
+                lastName={infoData.lastName}
+                description={infoData.description}
+            />
+            <Summary name="about"
+                {...infoData}
+            />
+            <Skills name="skills"
+                {...resumeData.skills}
+            />
+            <Resume name="resume"
+                experiences={resumeData.experiences}
+                educations={resumeData.educations}
+            />
             <Footer />
         </Container>
     )

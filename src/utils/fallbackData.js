@@ -1,14 +1,14 @@
 export const userInfoFallback = {
     firstName: "Mohammed",
     lastName: "Asif",
-    description: "I am a full stack web developer"
+    description: "I am a full stack web developer",
+    summary: "Driven full-stack software developer, familiar with a wide range of programming utilities and languages. Knowledgeable of backend and frontend development requirements. Excellent communication and organizational abilities with a resourceful approach to solving diverse problems. Deadline-driven and knowledgeable professional with a strong desire to learn and contribute to team success.",
 }
 
 export const userResumeFallback = {
     title: "Full Stack Developer",
-    summary: "Driven full-stack software developer, familiar with a wide range of programming utilities and languages. Knowledgeable of backend and frontend development requirements. Excellent communication and organizational abilities with a resourceful approach to solving diverse problems. Deadline-driven and knowledgeable professional with a strong desire to learn and contribute to team success.",
     skills: {
-        summary: "",
+        summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et dui ullamcorper, hendrerit dui ut, tristique urna. Sed ultricies ornare est at pulvinar..",
         showcase: [
             {
                 id: "sc_1",
@@ -21,33 +21,96 @@ export const userResumeFallback = {
             {
                 id: "tps_1",
                 skill: "Dotnet Core",
-                progress: 100
+                progress: 90
             },
             {
                 id: "tps_2",
                 skill: "React",
-                progress: 100
+                progress: 88
             },
             {
                 id: "tps_3",
                 skill: "Javascript",
-                progress: 100
+                progress: 92
             },
             {
                 id: "tps_4",
-                skill: "",
-                progress: 100
+                skill: "C#",
+                progress: 90
             },
             {
                 id: "tps_5",
-                skill: "",
-                progress: 100
-            }
+                skill: "HTML, CSS",
+                progress: 85
+            },
         ],
         allSkills: [
             {
                 id: "as_1",
+                skill: "Redux"
+            },
+            {
+                id: "as_2",
+                skill: "Dotnet Core"
+            },
+            {
+                id: "as_3",
+                skill: "C#"
+            },
+            {
+                id: "as_4",
+                skill: "EF Core"
+            },
+            {
+                id: "as_5",
+                skill: "Net Framework"
+            }, {
+                id: "as_6",
+                skill: "Node.js"
+            },
+            {
+                id: "as_7",
+                skill: "JQuery"
+            },
+            {
+                id: "as_8",
+                skill: "Java"
+            },
+            {
+                id: "as_9",
+                skill: "Javascript"
+            },
+            {
+                id: "as_10",
                 skill: "HTML"
+            },
+            {
+                id: "as_11",
+                skill: "CSS"
+            },
+            {
+                id: "as_12",
+                skill: "SQL"
+            },
+            {
+                id: "as_13",
+                skill: "XML"
+            },
+            {
+                id: "as_14",
+                skill: "MY SQL"
+            },
+            {
+                id: "as_15",
+                skill: "MS SQL"
+            },
+            {
+                id: "as_16",
+                skill: "Github"
+            },
+            {
+                id: "as_17",
+                skill: "Bitbucket"
             }
         ]
     },
@@ -64,7 +127,6 @@ export const userResumeFallback = {
             details: [
                 "Developed user interfaces for deployment on Amazon Web Services (AWS) platforms",
                 "Collaborated with developers and performance engineers to enhance supportability and identify performance bottlenecks",
-                "Collaborated with developers, representing web teams to establish project goals, projections and milestones",
                 "Researched new technologies, software packages and hardware products for use in website projects",
                 "Employed coding practices based on commonly accepted standards to establish site layout and user interface",
                 "Designed REST calls using React to streamline user interface performance",
@@ -111,7 +173,7 @@ export const userResumeFallback = {
             institution: "Humber College",
             location: "Toronto, ON",
             duration: {
-                from: { month: January, year: 2019 },
+                from: { month: "January", year: 2019 },
                 to: { month: "April", year: 2019 }
             },
             mainTechnologies: [
