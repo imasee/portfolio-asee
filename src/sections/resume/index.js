@@ -7,17 +7,17 @@ import "./index.scss";
 import withScrollElement from '../../hoc/withScrollElement';
 
 
-export default withScrollElement(memo(function () {
+export default withScrollElement(memo(function ({ educations, experiences }) {
   return (
     <Section className="my_resume" headingFirst="My" headingSecond="Resume">
       <Row className="w-100 m-0">
         <Col xs={12} className="px-0 mx-0 ml-md-auto" md={6}>
-          <Experiences />
+          <Experiences data={experiences} />
         </Col>
       </Row>
       <Row className="w-100 m-0">
         <Col xs={12} className="px-0 mx-0 ml-md-auto" md={6}>
-          <Educations />
+          <Educations data={educations} />
         </Col>
       </Row>
       <Row className="w-100 m-0">

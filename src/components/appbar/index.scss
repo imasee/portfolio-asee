@@ -41,12 +41,12 @@
         transform-origin: left;
         border-radius: 3rem;
       }
-      &.active {
-        &::after {
-          transform: scale(1);
-          border: 2px solid $primary-color !important;
-        }
-      }
+      // &.active {
+      //   &::after {
+      //     transform: scale(1);
+      //     border: 2px solid $primary-color !important;
+      //   }
+      // }
       &:hover {
         &::after {
           transform: scale(1);
@@ -96,6 +96,7 @@
     &-nav {
       border-top: 1px solid transparentize($color: $text-light-dark, $amount: 0.8);
       .nav-link {
+        color: $primary-light !important;
         &::after {
           display: none;
         }

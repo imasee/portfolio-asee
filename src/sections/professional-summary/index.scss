@@ -102,6 +102,13 @@
       color: $text-white;
       letter-spacing: 1px;
       line-height: 1.5rem;
+      span {
+        display: inline-block;
+        span {
+          display: inline;
+          border-right: 2px solid rgba(255, 0, 0, 0);
+        }
+      }
       br {
         display: none;
       }

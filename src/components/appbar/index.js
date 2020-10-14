@@ -1,10 +1,9 @@
 import React, { useRef, useState } from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar, Image } from "react-bootstrap";
 import "./index.scss";
 import Icon from "../Icon";
 import throttle from "lodash.throttle";
 import NavLink from "./NavLink";
-import Logo from './Logo';
 
 const scrollLinkProps = {
   spy: true,
@@ -65,8 +64,8 @@ export default function () {
         }
       }}
     >
-      <Navbar.Brand href="#home">
-        <Logo height="1.8rem" width="1.8rem" style={{ filter: "drop-shadow(2px 0mm 4mm rgba(0, 0, 0,.3))" }} />
+      <Navbar.Brand href="/">
+        <Image height="100%" width="30px" src="/assets/images/asee-icon.png" style={{ filter: "drop-shadow(2px 0mm 4mm rgba(0, 0, 0,.3))" }} />
       </Navbar.Brand>
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
