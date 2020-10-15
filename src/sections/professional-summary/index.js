@@ -31,7 +31,7 @@ export default withScrollElement(memo(function ({ firstName, lastName, descripti
       <div className="about-me_wrapper">
         <Fade bottom distance=".5em">
           <ProfileImage />
-          <span className="name mt-2">{firstName} &nbsp; {lastName}</span>
+          <span className="name mt-2">{firstName}&nbsp;{lastName}</span>
           <span className="role mb-2">{description}</span>
           <div className="summary_showcase mb-3">
             {[{ title: "Mob design", icon: "fa-mobile" },
