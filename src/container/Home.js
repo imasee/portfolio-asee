@@ -13,6 +13,8 @@ import Summary from "../sections/professional-summary";
 import Skills from "../sections/skills";
 //resume
 import Resume from "../sections/resume";
+//projects
+import Projects from "../sections/projects";
 //navbar
 import Appbar from "../components/appbar";
 //footer
@@ -54,6 +56,9 @@ export default function ({ infoData, resumeData }) {
                 experiences={resumeData.experiences}
                 educations={resumeData.educations}
             />
+            <Projects
+                name="projects"
+                data={resumeData.projects} />
             <Footer />
         </Container>
     )

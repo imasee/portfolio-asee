@@ -57,3 +57,23 @@ body {
   font-size: 12px;
   line-height: 1.42857;
 }
+
+//btn more
+.btn_more {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  margin: 0.5rem 1rem;
+  bottom: 0;
+
+  .btn {
+    background: $primary-light !important;
+    color: $dark !important;
+    // background: transparentize($color: $primary-lighter, $amount: 0.5);
+    font-size: 0.8rem !important;
+    text-transform: capitalize;
+    &:hover {
+      background: transparentize($color: $primary-lighter, $amount: 0.4);
+    }
+  }
+}

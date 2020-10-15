@@ -172,6 +172,7 @@ export const userResumeFallback = {
             type: "Academic Project",
             institution: "Humber College",
             location: "Toronto, ON",
+            imageUrl: "/assets/images/library-mgmt.jpg",
             duration: {
                 from: { month: "January", year: 2019 },
                 to: { month: "April", year: 2019 }
@@ -214,6 +215,7 @@ export const userResumeFallback = {
             type: "Capstone Project",
             institution: "Humber College",
             location: "Toronto, ON",
+            imageUrl: "/assets/images/bridge.jpg",
             duration: {
                 from: { month: "May", year: 2019 },
                 to: { month: "July", year: 2019 }
