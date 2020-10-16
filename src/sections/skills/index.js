@@ -21,9 +21,9 @@ export default withScrollElement(memo(function ({ allSkills, topSkills, summary 
         <div className="my-skills_wrapper">
           <Row className="w-100 mx-0 d-flex flex-column flex-md-row">
             <Col sm={12} md className="px-0">
-              <p className="my-skills-text text-center text-md-left pl-0 pr-0 pr-md-5">
+              {/* <p className="my-skills-text text-center text-md-left pl-0 pr-0 pr-md-5">
                 {summary}
-              </p>
+              </p> */}
 
               <AllSkills data={allSkills} />
             </Col>
