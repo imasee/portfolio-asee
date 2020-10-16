@@ -1,7 +1,8 @@
 export const userInfoFallback = {
     firstName: "Mohammed",
+    title: "Full Stack Developer",
     lastName: "Asif",
-    description: "I am a full stack web developer",
+    description: "I'm a full stack developer",
     summary: "Driven full-stack software developer, familiar with a wide range of programming utilities and languages. Knowledgeable of backend and frontend development requirements. Excellent communication and organizational abilities with a resourceful approach to solving diverse problems. Deadline-driven and knowledgeable professional with a strong desire to learn and contribute to team success.",
 }
 

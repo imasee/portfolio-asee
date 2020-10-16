@@ -16,7 +16,7 @@ const ProfileImage = memo(() => (<Image
 />));
 
 
-export default withScrollElement(memo(function ({ firstName, lastName, description, summary }) {
+export default withScrollElement(memo(function ({ firstName, lastName, description, summary, title }) {
   const [state, setState] = useState({
     showMore: false
   });
@@ -32,11 +32,11 @@ export default withScrollElement(memo(function ({ firstName, lastName, descripti
         <Fade bottom distance=".5em">
           <ProfileImage />
           <span className="name mt-2">{firstName}&nbsp;{lastName}</span>
-          <span className="role mb-2">{description}</span>
+          <span className="role mb-2">{title}</span>
           <div className="summary_showcase mb-3">
-            {[{ title: "Mob design", icon: "fa-mobile" },
-            { title: "Development", icon: "fa-tv" },
-            { title: "Ui Design", icon: "fa-gem" }].map((showcaseItem, i) =>
+            {[{ title: "Responsive", icon: "fa-mobile" },
+            { title: "Server dev", icon: "fa-tv" },
+            { title: "Ui design", icon: "fa-gem" }].map((showcaseItem, i) =>
               <SummaryShowcaseItem
                 delay={(i + 1) * 300}
                 key={i}
