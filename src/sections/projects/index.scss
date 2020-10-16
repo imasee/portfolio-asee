@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 
 .my_projects {
+    min-height: 100vh;
     &__header {
         padding-left: 0rem !important;
     }
@@ -44,6 +45,17 @@
                     overflow: hidden;
                     position: relative;
                     transition: all 0.3s;
+                    &_duration {
+                        position: absolute;
+                        z-index: 100;
+                        background: transparentize($color: $slate, $amount: 0.3);
+                        right: 1rem;
+                        top: 0.5rem;
+                        padding: 0.5rem 0.8rem;
+                        border: 1px solid transparentize($color: $text-light, $amount: 0.4);
+                        color: $text-light;
+                        font-weight: 300;
+                    }
                     img {
                         transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
                         width: 100%;
@@ -114,6 +126,7 @@
             .projects_wrapper {
                 .projects_item {
                     &_content {
+                        height: auto;
                         &_heading {
                             font-size: 1.3rem;
                         }
