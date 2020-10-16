@@ -58,7 +58,7 @@ export default withScrollElement(memo(function ({ firstName, lastName, descripti
             className="d-block m-auto more-btn"
             onClick={toggleOverflow}
           >
-            {state.showMore ? "Less" : "Show More"}
+            {state.showMore ? "Less" : "Read more"}
           </Button>
         </Fade>
 

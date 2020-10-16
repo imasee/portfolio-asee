@@ -9,7 +9,7 @@
   align-items: center;
   font-family: "Barlow", sans-serif !important;
   background: linear-gradient(to bottom, #0b1214 0%, #0b1416 99.7%);
-  text-align: right;
+  text-align: center;
   overflow: hidden;
   &_vector {
     position: absolute;
@@ -40,9 +40,9 @@
   .name__intro {
     position: relative;
     z-index: 2;
-    margin-right: auto;
+    // margin-right: auto;
     margin-left: 0;
-    width: 40%;
+    width: 100%;
     //info
     &_info {
       color: $text-light;

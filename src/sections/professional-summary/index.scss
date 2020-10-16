@@ -116,6 +116,7 @@
 
     //more button
     .more-btn {
+      padding: 0.2rem 0.8rem;
       border: 2px solid transparentize($color: $primary-light, $amount: 0.3) !important;
       position: relative;
       background: transparent;

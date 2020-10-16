@@ -1,5 +1,4 @@
 import React from "react";
-import ToolTip from '../../components/Tooltip';
 
 
 export const EdDuration = React.memo(({ from, to }) => (
@@ -34,14 +33,13 @@ export const EdSubheading = React.memo(({ main, sec }) => (
 ));
 
 export const ButtonMore = React.memo(({ text = "mybutton", title, className, handleClick }) => (
-    <ToolTip title={title}>
-        <div className="btn_more">
-            <button onClick={handleClick}
-                variant="default"
-                className={["btn ", className].join(" ")}
-                type="button">
-                {text}
-            </button>
-        </div>
-    </ToolTip>
+    <div className="btn_more">
+        <button onClick={handleClick}
+            variant="default"
+            className={["btn ", className].join(" ")}
+            title={title}
+            type="button">
+            {text}
+        </button>
+    </div>
 ));

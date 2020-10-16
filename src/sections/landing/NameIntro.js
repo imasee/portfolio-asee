@@ -9,7 +9,7 @@ export default function ({ firstName, lastName, description }) {
     <Container className="name__intro" fluid>
       <div className="name__intro_info">
         <span className="name__intro_info-greeting">i'm</span>
-        <span className="name__intro_info-name text-right text-uppercase">
+        <span className="name__intro_info-name text-center text-uppercase">
           <Fade delay={500} duration={2000} bottom distance=".5rem">
             <span className="d-block d-sm-inline-block mr-0 mr-md-2">{firstName}</span>
             <span className="d-block d-sm-inline-block">{lastName}</span>
