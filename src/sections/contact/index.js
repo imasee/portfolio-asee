@@ -18,7 +18,7 @@ export default withScrollElement(memo(function Contact({
             <Section className="contact_me" headingFirst="Contact" headingSecond="Me">
                 <Container className="contact_wrapper p-0" fluid>
                     <address>
-                        <Row className="mx-2 px-4">
+                        <Row className="mx-2">
                             <Col md={4}>
                                 <Fade bottom distance="1.5rem" delay={800}>
                                     <Card className="contact_card mt-2 py-4 d-flex flex-row">
