@@ -3,6 +3,7 @@ import { Button, Container } from "react-bootstrap";
 import Icon from "../../components/Icon";
 import "./index.scss";
 import { MemoFade as Fade } from '../../components/reveal-memoized';
+import resumePdf from '../../resources/mohammedasif-fullstack-resume.pdf';
 
 export default function ({ firstName, lastName, description }) {
   return (
@@ -21,7 +22,9 @@ export default function ({ firstName, lastName, description }) {
           </span>
         </Fade>
         <Fade delay={2000}>
-          <Button type="button" variant="default" className="btn">
+          <Button type="button" variant="default" className="btn" onClick={() => {
+            window.open(resumePdf);
+          }}>
             <span className="d-inline-block mr-2">Download Resume</span>
             <Icon
               className="pr-2 download"

@@ -65,7 +65,7 @@ export default function () {
       }}
     >
       <Navbar.Brand href="/">
-        <Image height="100%" width="30px" src="/assets/images/asee-icon.png" style={{ filter: "drop-shadow(2px 0mm 4mm rgba(0, 0, 0,.3))" }} />
+        <Image height="100%" width="30px" src="/android-chrome-192x192.png" style={{ filter: "drop-shadow(2px 0mm 4mm rgba(0, 0, 0,.3))" }} />
       </Navbar.Brand>
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
