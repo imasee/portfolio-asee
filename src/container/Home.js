@@ -19,6 +19,9 @@ import Projects from "../sections/projects";
 import Appbar from "../components/appbar";
 //footer
 import Footer from '../components/footer';
+//contact
+import Contact from '../sections/contact';
+
 
 export default function ({ infoData, resumeData }) {
 
@@ -59,6 +62,8 @@ export default function ({ infoData, resumeData }) {
             <Projects
                 name="projects"
                 data={resumeData.projects} />
+
+            <Contact name="contact" />
             <Footer />
         </Container>
     )

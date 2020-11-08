@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+.contact_me {
+    min-height: auto;
+    &__header {
+        padding-left: 0rem !important;
+    }
+    &_heading {
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: transparentize($color: $primary-dark, $amount: 0.5);
+    }
+    &__content {
+        .contact_wrapper {
+            .contact_card {
+                background: $slate !important;
+                padding: 1rem 1rem;
+                &_icon {
+                    color: $primary-light;
+                }
+                &_text {
+                    margin: 0 1rem;
+                    color: $text-white;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+}
