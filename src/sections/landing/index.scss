@@ -101,6 +101,7 @@
           position: relative;
           z-index: 1;
           color: $text-white !important;
+          border-color: $text-white !important ;
           &::after {
             top: 0%;
           }
