@@ -54,7 +54,7 @@ export default function () {
       // ref={navbarRef}
       expand="md"
       fixed="top"
-      className={`px-4 px-sm-4 ${navbarClassList.join(" ")}`}
+      className={`px-4 px-sm-4 px-md-5 py-3 ${navbarClassList.join(" ")}`}
       collapseOnSelect
       onToggle={(expanded) => {
         if (expanded) {
