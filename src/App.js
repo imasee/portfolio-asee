@@ -4,6 +4,7 @@ import "./styles.scss";
 import Home from './container/Home';
 // import { getUserInfo, getUserResume } from './services/apiClient';
 import { userInfoFallback, userResumeFallback } from './utils/fallbackData';
+import ReactGA from 'react-ga';
 
 export default function App() {
 
@@ -34,6 +35,8 @@ export default function App() {
 
   useEffect(() => {
     // fetchData();
+    ReactGA.initialize('UA-180919127-1');
+    ReactGA.pageview("home-page");
   }, []);
 
   // React.useEffect(() => {
