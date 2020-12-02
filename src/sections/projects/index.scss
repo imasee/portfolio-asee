@@ -48,7 +48,7 @@
                     &_duration {
                         position: absolute;
                         z-index: 100;
-                        background: transparentize($color: $slate, $amount: 0.3);
+                        background: transparentize($color: $slate, $amount: 0.1);
                         right: 1rem;
                         top: 0.5rem;
                         padding: 0.5rem 0.8rem;
@@ -82,7 +82,7 @@
                     padding: 1rem;
                     padding-right: 1.8rem;
                     text-align: left;
-                    height: 120px;
+                    height: 80px;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
@@ -99,15 +99,14 @@
                         font-size: 0.9rem;
                         overflow: hidden;
                     }
+                    .btn_more {
+                        bottom: 12px;
+                    }
                     &_btn {
                         border-radius: 50%;
                         box-shadow: none;
                         border: none;
                         background: $primary-light;
-                        position: absolute;
-                        right: 0.5rem;
-                        bottom: 0.5rem;
-                        // transform: translateY(-50%);
                     }
                 }
             }

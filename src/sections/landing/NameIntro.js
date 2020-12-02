@@ -3,7 +3,7 @@ import { Button, Container } from "react-bootstrap";
 import Icon from "../../components/Icon";
 import "./index.scss";
 import { MemoFade as Fade } from '../../components/reveal-memoized';
-import resumePdf from '../../resources/mohammedasif-fullstack-resume.pdf';
+import resumePdf from '../../resources/MOHAMMEDASIF_FULLSTACK_DEVELOPER_RESUME_PDF.pdf';
 
 export default function ({ firstName, lastName, description }) {
   return (

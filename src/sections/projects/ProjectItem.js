@@ -19,10 +19,10 @@ export default memo(function ({ data, delay, handleToggleDetailShow }) {
                             {data.duration.from.month.substr(0, 3)}&nbsp;
                             {data.duration.from.year}
                         </span>}<span>{" "}-{" "}</span>
-                        {data.duration.to && data.duration.to.month && data.duration.to.year && <span>
+                        {data.duration.to && data.duration.to.month && data.duration.to.year ? <span>
                             {data.duration.to.month.substr(0, 3)}&nbsp;
                             {data.duration.to.year}
-                        </span>}
+                        </span> : "Present"}
                     </Badge>}
                     <img
                         src={data && data.imageUrl}

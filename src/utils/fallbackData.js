@@ -169,6 +169,75 @@ export const userResumeFallback = {
     projects: [
         {
             id: "pr_1",
+            title: "Expense Tracker",
+            type: "Side Project",
+            institution: "",
+            location: "Toronto, ON",
+            imageUrl: "/assets/images/expense-tracker.jpg",
+            duration: {
+                from: { month: "May", year: 2020 },
+            },
+            mainTechnologies: [
+                {
+                    id: "mt_1",
+                    title: ".NET Core",
+                    icon: ""
+                },
+                {
+                    id: "mt_2",
+                    title: "EF Core",
+                    icon: ""
+                },
+                {
+                    id: "mt_3",
+                    title: "Mongo Db",
+                    icon: ""
+                },
+                {
+                    id: "mt_4",
+                    title: "React",
+                    icon: ""
+                },
+                {
+                    id: "mt_5",
+                    title: "Redux",
+                    icon: ""
+                },
+                {
+                    id: "mt_6",
+                    title: "Docker",
+                    icon: ""
+                }, {
+                    id: "mt_7",
+                    title: "ASP.NET Identity",
+                    icon: ""
+                }, {
+                    id: "mt_8",
+                    title: "DI",
+                    icon: ""
+                },
+                {
+                    id: "mt_9",
+                    title: "SCSS",
+                    icon: ""
+                }
+            ],
+            details: [
+                "Developed application to manage everyday expenses using .NET Core and React",
+                "Ensured application security and user identity by instituting JWT tokenbased authentication and ASP.Net Identity",
+                "Implemented CRUD actions like GET, POST, PUT, and DELETE",
+                "Employed Swagger tools to test the API endpoints",
+                "Performed Unit testing using XUnit, Integration Testing, Performance Testing",
+                "Devised, implemented database designs and data models using Entity Framework Core Code-First approach with Repository-Pattern",
+                "Enhanced Server-side and Client-side performance utilizing asynchronous programming capabilities in C#, JavaScript",
+                "Utilized Figma for UI design prototyping",
+                "Applied Object-oriented Programming (OOP) concepts to develop UI components that could be reused across the Web Application",
+                "Integrated docker containers for Heroku deployment",
+                "Applied Test-Driven Development (TDD), Automated build using Heroku CI/CD"
+            ]
+        },
+        {
+            id: "pr_2",
             title: "Library Management System",
             type: "Academic Project",
             institution: "Humber College",
@@ -196,7 +265,7 @@ export const userResumeFallback = {
                 },
                 {
                     id: "mt_4",
-                    title: "Javascript",
+                    title: "Razor",
                     icon: ""
                 }
             ],
@@ -211,7 +280,7 @@ export const userResumeFallback = {
             ]
         },
         {
-            id: "pr_2",
+            id: "pr_3",
             title: "User Portal, The Bridge",
             type: "Capstone Project",
             institution: "Humber College",
@@ -239,8 +308,16 @@ export const userResumeFallback = {
                 },
                 {
                     id: "mt_4",
-                    title: "Spring",
+                    title: "Spring Boot",
                     icon: ""
+                },
+                {
+                    id: "mt_5",
+                    title: "Trello"
+                },
+                {
+                    id: "mt_6",
+                    title: "JSP"
                 }
             ],
             details: [
