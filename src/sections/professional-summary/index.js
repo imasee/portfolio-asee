@@ -49,7 +49,7 @@ export default withScrollElement(memo(function ({ firstName, lastName, descripti
           <Truncate
             className="summary"
             trimWhitespace={false}
-            lines={state.showMore ? 0 : 4}
+            lines={state.showMore ? 0 : 2}
             ellipsis={<span>...</span>}>
             {summary}
           </Truncate>
