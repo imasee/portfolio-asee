@@ -3,7 +3,7 @@ export const userInfoFallback = {
     title: "Full Stack Developer",
     lastName: "Asif",
     description: "I'm a full stack developer",
-    summary: "Driven full-stack software developer, familiar with a wide range of programming utilities and languages. Knowledgeable of backend and frontend development requirements. Excellent communication and organizational abilities with a resourceful approach to solving diverse problems. Deadline-driven and knowledgeable professional with a strong desire to learn and contribute to team success.",
+    summary: "Hard-working and effective Full-stack .Net Developer with experience in Developing and Implementation of web applications using C#, .NET Core framework, and React. Excellent communication and organizational abilities with a resourceful approach to solving diverse problems. Deadline-driven and knowledgeable professional with a strong desire to learn and contribute to team success. Experienced in MERN stack development Mongo dB, Express, Node, and React.",
 }
 
 export const userResumeFallback = {
