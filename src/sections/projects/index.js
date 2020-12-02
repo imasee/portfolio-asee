@@ -28,7 +28,7 @@ export default memo(withScrollElement(function ({ data = [] }) {
                     <ProjectItem
                         data={project}
                         key={i}
-                        delay={(i + 1) * 300}
+                        delay={(i + 1) * 100}
                         handleToggleDetailShow={handleToggleDetailShow} />))}
             </Container>
         </Section>

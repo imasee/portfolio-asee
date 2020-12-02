@@ -20,7 +20,7 @@ export default withScrollElement(memo(function Contact({
                     <address>
                         <Row className="mx-2">
                             <Col md={4}>
-                                <Fade bottom distance="1.5rem" delay={800}>
+                                <Fade bottom distance="1.5rem" delay={300}>
                                     <Card className="contact_card mt-2 py-4 d-flex flex-row">
                                         <Icon className="contact_card_icon" fontSize="1.2rem" icon="fa-envelope" />
                                         <a className="contact_card_text" href={`mailto:${email}`}>{email}</a>
@@ -28,7 +28,7 @@ export default withScrollElement(memo(function Contact({
                                 </Fade>
                             </Col>
                             <Col md={4}>
-                                <Fade bottom distance="1.5rem" delay={1000}>
+                                <Fade bottom distance="1.5rem" delay={600}>
                                     <Card className="contact_card mt-2 py-4 d-flex flex-row">
                                         <Icon className="contact_card_icon" fontSize="1.2rem" icon="fa-mobile" />
                                         <a className="contact_card_text" href={`tel:${phone}`}>{phone}</a>
@@ -36,7 +36,7 @@ export default withScrollElement(memo(function Contact({
                                 </Fade>
                             </Col>
                             <Col xs sm md={4}>
-                                <Fade bottom distance="1.5rem" delay={1200}>
+                                <Fade bottom distance="1.5rem" delay={900}>
                                     <Card className="contact_card mt-2 py-4 d-flex flex-row">
                                         <Icon className="contact_card_icon" fontSize="1.2rem" icon="fa-home" />
                                         <a className="contact_card_text"

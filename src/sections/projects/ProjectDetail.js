@@ -1,6 +1,6 @@
 import React, { Fragment, memo, useCallback } from 'react';
 import {
-    //  Badge,
+    Badge,
     Button, Image, ListGroup, ListGroupItem, Modal
 } from 'react-bootstrap';
 import "./project-detail.scss";
@@ -23,7 +23,7 @@ export default memo(function ({ show, handleToggleDetailShow, data }) {
             >
                 <div className="project_detail_header">
                     <div className="project_detail_header_content">
-                        <div className="w-100 d-flex flex-row">
+                        <div className="w-100 d-flex flex-row align-items-center">
                             <div className="project_detail_header_content_title">{data && data.title}</div>
                             <Button variant="danger" className="shadow" onClick={handleClose}>Close</Button>
                         </div>
@@ -35,10 +35,10 @@ export default memo(function ({ show, handleToggleDetailShow, data }) {
                                     {data.duration.from.month.substr(0, 3)}&nbsp;
                             {data.duration.from.year}
                                 </span>}<span>{" "}-{" "}</span>
-                                {data.duration.to && data.duration.to.month && data.duration.to.year && <span>
+                                {data.duration.to && data.duration.to.month && data.duration.to.year ? <span>
                                     {data.duration.to.month.substr(0, 3)}&nbsp;
                             {data.duration.to.year}
-                                </span>}
+                                </span> : "Present"}
                             </div>}
                         </div>
                     </div>
@@ -48,17 +48,17 @@ export default memo(function ({ show, handleToggleDetailShow, data }) {
                     />}
                 </div>
                 <div className="project_detail_content">
-                    {/* <div className="project_detail_content_main_tech">
+                    <div className="project_detail_content_main_tech">
                         <div className="project_detail_content_main_tech_header pt-1">
                             Main technologies
                         </div>
 
                         < div className="project_detail_content_main_tech_content">
                             {data && data.mainTechnologies.map((tech, i) => {
-                                return (<Badge className="project_detail_content_main_tech_content_tech" key={i} pill>{tech}</Badge>)
+                                return <Badge className="project_detail_content_main_tech_content_tech" key={Math.random() + i} pill>{tech.title}</Badge>
                             })}
                         </div>
-                    </div> */}
+                    </div>
                     <div className="project_detail_content_description">
                         <div className="project_detail_content_description_header pt-3">
                             Description

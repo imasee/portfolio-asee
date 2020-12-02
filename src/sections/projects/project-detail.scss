@@ -32,7 +32,6 @@
                 font-weight: 700;
                 flex-grow: 1;
                 color: $text-white;
-                padding-bottom: 1rem;
             }
             &_type {
                 font-size: 1.1rem;
@@ -87,13 +86,12 @@
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 &_tech {
                     background: #14171b !important;
                     margin: 0.3rem 0.2rem;
                     padding: 0.7rem 1rem !important;
-                    flex-grow: 1;
                     font-weight: 300 !important;
                     color: $text-light !important;
                     border: 1px solid transparentize($color: $text-light, $amount: 0.9) !important;
